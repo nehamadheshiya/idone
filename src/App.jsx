@@ -2,15 +2,23 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import AttendanceOptions from './components/AttendanceOptions'
+import Cards from './components/Cards'
+import PartnerLogos from './components/PartnerLogos'
+import HRFeatures from './components/HRFeatures'
+import IndustriesGrid from './components/IndustryCard'
+import CustomIndustrySection from './components/CustomIndustrySection'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-     
-      <h1 className='text-green-800'>Vite + React</h1>
-     
+     <PartnerLogos/>
+     <AttendanceOptions/>
+     <HRFeatures/>
+     <IndustriesGrid/>
+     <CustomIndustrySection/>
+     {/* <Cards /> */}
     </>
   )
 }
