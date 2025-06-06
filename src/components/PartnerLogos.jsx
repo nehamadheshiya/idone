@@ -34,7 +34,7 @@ export default function PartnerLogos() {
         `}
       </style>
 
-      <div className="text-center  mb-8">
+      <div className="text-center  mb-8 mt-68">
         <p className="text-xs choose text-[#007BFF] font-medium uppercase mb-2">TRUSTED PARTNERS</p>
         <h2 className="text-xl poppins-font md:text-2xl font-medium  mb-12">
           Powering Success For Industry Leaders

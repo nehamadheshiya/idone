@@ -8,12 +8,16 @@ import PartnerLogos from './components/PartnerLogos'
 import HRFeatures from './components/HRFeatures'
 import IndustriesGrid from './components/IndustryCard'
 import CustomIndustrySection from './components/CustomIndustrySection'
+import Navbar from './component/Navbar'
 import WhyChooseUs from './components/WhyChooseUs'
 
 function App() {
 
   return (
     <>
+     
+     <Navbar/>
+     
      <PartnerLogos/>
      <AttendanceOptions/>
      <HRFeatures/>
