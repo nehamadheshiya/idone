@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/idoneLogoo.png'
 import bg from '../assets/images/hero-bg.png'
+import vid from '../assets/videos/hero-vid.mp4'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -72,7 +73,7 @@ export default function Navbar() {
 
         {/* Feature Buttons */}
         <div className="mt-20 flex flex-wrap justify-center gap-4 px-4">
-          <button className="flex items-center gap-2 px-6 py-3 border border-[#CBCBCB] rounded  text-sm ">  
+          <button className="flex items-center gap-2 px-6 py-3 border border-[#CBCBCB] rounded  text-sm ">
             <span role="img" aria-label="face">
               <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                 <mask id="mask0_781_2071" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
@@ -134,7 +135,21 @@ export default function Navbar() {
           </button>
         </div>
       </section>
-
+      <section >
+        <video
+          className="d-block mx-auto img-fluid"
+          style={{
+            width: "1020px", height: "450px",
+            zIndex: 999,
+            position: "relative"
+          }}
+          // controls
+        // poster="/images/video-poster.jpg" // optional thumbnail
+        >
+          <source src={vid} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </section>
 
     </div>
   </>);
