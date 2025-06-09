@@ -9,6 +9,7 @@ import HRFeatures from './components/HRFeatures'
 import IndustriesGrid from './components/IndustryCard'
 import CustomIndustrySection from './components/CustomIndustrySection'
 import Navbar from './components/Navbar'
+import WhyChooseUs from './components/WhyChooseUs'
 import Hrleaders from './components/Hrleaders'
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
      <HRFeatures/>
      <IndustriesGrid/>
      <CustomIndustrySection/>
+     <WhyChooseUs/>
      {/* <Cards /> */}
      <Hrleaders/>
     </>
