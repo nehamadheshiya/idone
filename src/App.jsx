@@ -8,18 +8,19 @@ import PartnerLogos from './components/PartnerLogos'
 import HRFeatures from './components/HRFeatures'
 import IndustriesGrid from './components/IndustryCard'
 import CustomIndustrySection from './components/CustomIndustrySection'
-import Navbar from './component/Navbar'
+import Navbar from './components/Navbar'
 import WhyChooseUs from './components/WhyChooseUs'
 import BusinessImpactStats from './components/BusinessImpactStats'
 import MediaSection from './components/MediaSection'
 import FAQSection from './components/FAQSection'
+import Hrleaders from './components/Hrleaders'
 
 function App() {
 
   return (
     <>
      
-     {/* <Navbar/>    */}
+     <Navbar/>
      <PartnerLogos/>
      <AttendanceOptions/>
      <HRFeatures/>
@@ -30,6 +31,7 @@ function App() {
      <MediaSection/>
      <FAQSection/>
      {/* <Cards /> */}
+     <Hrleaders/>
     </>
   )
 }
