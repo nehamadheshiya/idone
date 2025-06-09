@@ -104,7 +104,7 @@ export default function Navbar() {
           <p className="hero-subtitle font-['poppins']">
             Save hours on routine tasks, payroll errors, and leave requests with real-time attendance and workforce automation.
           </p>
-          <button className="hero-button font-[poppins]">Book Demo</button>
+          <button className="hero-button font-[poppins] text-sm font-medium">Book Demo</button>
         </div>
 
         <div className="method-buttons">

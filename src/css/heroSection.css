@@ -26,7 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #d5d5d5;
+  color: #B2B2B2;
 }
 
 .logo img {
@@ -111,8 +111,8 @@
 
 .hero-subtitle {
   margin-top: 1.5rem;
-  color: #d5d5d5;
-  font-size: 1rem;
+  color: #9c9a9a;
+  font-size: 14px;
   padding: 0 0rem;
 }
 
@@ -120,9 +120,9 @@
   margin-top: 2rem;
   background-color: white;
   color: #007bff;
-  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
   border-radius: 0.5rem;
-  font-weight: 500;
+  /* font-weight: 400; */
   transition: all 0.3s ease;
 }
 
@@ -146,7 +146,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.60rem 1.3rem;
   border: 1px solid #686060;
   border-radius: 6px;
   font-size: 0.875rem;
