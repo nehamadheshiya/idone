@@ -10,20 +10,25 @@ import IndustriesGrid from './components/IndustryCard'
 import CustomIndustrySection from './components/CustomIndustrySection'
 import Navbar from './component/Navbar'
 import WhyChooseUs from './components/WhyChooseUs'
+import BusinessImpactStats from './components/BusinessImpactStats'
+import MediaSection from './components/MediaSection'
+import FAQSection from './components/FAQSection'
 
 function App() {
 
   return (
     <>
      
-     <Navbar/>
-     
+     {/* <Navbar/>    */}
      <PartnerLogos/>
      <AttendanceOptions/>
      <HRFeatures/>
      <IndustriesGrid/>
      <CustomIndustrySection/>
      <WhyChooseUs/>
+     <BusinessImpactStats/>
+     <MediaSection/>
+     <FAQSection/>
      {/* <Cards /> */}
     </>
   )
