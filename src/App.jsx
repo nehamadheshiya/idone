@@ -10,6 +10,9 @@ import IndustriesGrid from './components/IndustryCard'
 import CustomIndustrySection from './components/CustomIndustrySection'
 import Navbar from './components/Navbar'
 import WhyChooseUs from './components/WhyChooseUs'
+import BusinessImpactStats from './components/BusinessImpactStats'
+import MediaSection from './components/MediaSection'
+import FAQSection from './components/FAQSection'
 import Hrleaders from './components/Hrleaders'
 
 function App() {
@@ -24,6 +27,9 @@ function App() {
      <IndustriesGrid/>
      <CustomIndustrySection/>
      <WhyChooseUs/>
+     <BusinessImpactStats/>
+     <MediaSection/>
+     <FAQSection/>
      {/* <Cards /> */}
      <Hrleaders/>
     </>
