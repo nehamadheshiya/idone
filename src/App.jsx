@@ -8,7 +8,8 @@ import PartnerLogos from './components/PartnerLogos'
 import HRFeatures from './components/HRFeatures'
 import IndustriesGrid from './components/IndustryCard'
 import CustomIndustrySection from './components/CustomIndustrySection'
-import Navbar from './component/Navbar'
+import Navbar from './components/Navbar'
+import Hrleaders from './components/Hrleaders'
 
 function App() {
 
@@ -16,13 +17,13 @@ function App() {
     <>
      
      <Navbar/>
-     
      <PartnerLogos/>
      <AttendanceOptions/>
      <HRFeatures/>
      <IndustriesGrid/>
      <CustomIndustrySection/>
      {/* <Cards /> */}
+     <Hrleaders/>
     </>
   )
 }
