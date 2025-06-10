@@ -199,6 +199,10 @@
     display: none;
   }
 
+  .logo{
+    filter: invert();
+  }
+
   .nav-actions-mobile {
     display: block;
     padding-left: 40%;
@@ -223,12 +227,12 @@
   }
 
   .navbar.fixed.logo{
-    filter: invert();
+    
   }
 
   .logo img {
     margin-top: -10px;
-    filter: invert();
+    /* filter: invert(); */
   }
 
   .menu-toggle {

@@ -8,14 +8,6 @@ export default function Hrleaders() {
         "IDone Helped Us Reduce Our Attrition Rates By Disbursing Salaries Timely.",
     ];
 
-    const testimonialCards = Array(6).fill(testimonials).flat().map((text, i) => (
-        <div key={i} className="testimonial-card">
-            <div className="quote-icon">❝</div>
-            <p className="testimonial-text font-[poppins] font-normal text-xs">{text}</p>
-            <div className="testimonial-brand">NIAM™</div>
-            <p className="testimonial-tagline">redefining learning</p>
-        </div>
-    ));
 
     return (
         <div className='hrleaders-wrapper flex flex-row text-white px-22 py-16'>
@@ -72,7 +64,7 @@ export default function Hrleaders() {
 
 
             {/* Mobile Marquee (Right Scroll) */}
-            <div className="marquee-grid-mob">
+            <div className="marquee-grid-mob ">
                 <div className="marquee-track">
                     {Array(4).fill(testimonials).flat().map((text, i) => (
                         <div key={`mob-${i}`} className="testimonial-card">

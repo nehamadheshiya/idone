@@ -31,11 +31,11 @@ function App() {
      <WhyChooseUs/>
      <BusinessImpactStats/>
      <MediaSection/>
+     <Hrleaders/>
      <FAQSection/>
      <DemoFormSection/>
      <Footer/>
      {/* <Cards /> */}
-     {/* <Hrleaders/> */}
     </>
   )
 }
