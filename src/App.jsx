@@ -14,6 +14,8 @@ import BusinessImpactStats from './components/BusinessImpactStats'
 import MediaSection from './components/MediaSection'
 import FAQSection from './components/FAQSection'
 import Hrleaders from './components/Hrleaders'
+import DemoFormSection from './components/DemoFormSection'
+import Footer from './components/Footer'
 
 function App() {
 
@@ -30,6 +32,8 @@ function App() {
      <BusinessImpactStats/>
      <MediaSection/>
      <FAQSection/>
+     <DemoFormSection/>
+     <Footer/>
      {/* <Cards /> */}
      {/* <Hrleaders/> */}
     </>

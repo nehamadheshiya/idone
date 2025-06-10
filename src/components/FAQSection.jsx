@@ -1,30 +1,31 @@
 import { useState } from "react";
 import arrow_down from "../assets/arrow_down.png";
+import arrow_back from "../assets/arrow_back.png";
 
 const faqs = [
   "How can employees mark attendance on IDONE HRMS?",
-  "Can employees view their attendance history?",
-  "Is geo-location required to mark attendance?",
-  "Can attendance be marked remotely?",
-  "What if an employee forgets to mark attendance?",
-  "How do managers approve attendance requests?",
-  "Is biometric attendance supported?",
-  "Can employees mark half-day attendance?",
-  "Is attendance data synced in real-time?",
-  "How can HR export attendance reports?",
+  " Is there a mobile application for IDONE?",
+  "Can IDONE handle multiple shifts and schedules?",
+  "Does IDONE provide payroll generation feature?",
+  "Is our HRMS suitable for organizations with remote or field employees?",
+  "Is my data on IDONE HRMS secure?",
+  "Does IDONE support leave management?",
+  "Can IDONE track overtime and late attendance?",
+  "How does IDONE prevent proxy attendance or buddy punching?",
+  "Can I customize IDONE to fit my organization's specific needs?",
 ];
 
 const answers = [
-  "IDONE can be integrated with Fingerprint Scanner, Facial Recognition (Free-Flow Attendance), Palm Vein Recognition, QR Code with Geo-location tracking, OSD (Outstation Duty).",
-  "Yes, employees can view detailed attendance logs under the 'My Attendance' section.",
-  "Yes, employees must enable location access for accurate attendance marking.",
-  "Yes, if your company allows remote work, employees can mark attendance remotely via the mobile app.",
-  "They can raise an attendance regularization request from their portal.",
-  "Managers can go to the 'Approvals' tab and take action on pending attendance requests.",
-  "Yes, IDONE HRMS supports biometric integration for automated attendance marking.",
-  "Yes, options for half-day attendance are available while marking.",
-  "Yes, all attendance entries are updated in real-time across platforms.",
-  "HR can export detailed reports in Excel or PDF from the Reports section.",
+  "IDONE can be integrated with Fingerprint Scanner, Facial Recognition (Free-Flow Attendance), Palm Vein Recognition, QR Code with Geo-location tracking, OSD (Outstation Duty). ",
+  "Yes, IDONE offers a mobile application compatible with both Android and iOS devices. The app allows employees to mark attendance, check Payslips, request leave and attendance regularisation, and perform other HR-related actions.",
+  "Absolutely. IDONE enables Smart Roster Management that supports an unlimited number of shifts and schedules, making it suitable for organizations with diverse operational hours. Admins can easily set up and manage different shifts and schedules through the web portal.",
+  " Yes, IDONE empowers you to generate payroll seamlessly for all your employees. Moreover, attendance data on IDONE can be exported with a single click to your existing finance & payroll software, streamlining the payroll process and reducing administrative workload.",
+  " Yes, IDONE is ideal for organizations with remote or field employees. The mobile app's geo-location feature ensures that attendance is marked only when the employee is at the designated location, preventing proxy attendance and enhancing accuracy.",
+  "Yes, IDONE prioritizes data security by implementing robust encryption protocols and secure authentication methods. All attendance data is stored securely and can only be accessed by authorized personnel, ensuring confidentiality and compliance with data protection regulations.",
+  "Yes, IDONE includes a leave management module where employees can apply for leave through the mobile app or web portal, and managers can approve or reject leave requests efficiently.",
+  "Yes, IDONE can automatically calculate overtime, late arrivals, and early departures based on the defined shift timings and attendance data. This helps HR teams manage employee working hours more accurately.",
+  "IDONE uses biometric verification such as fingerprint and facial recognition, along with geo-location tracking on the mobile app, to ensure that only the actual employee can mark attendance, minimizing fraudulent practices. Chances of identity spoofing and proxy-marking are minimal with IDONE.",
+  " Yes, IDONE is highly customizable. You can tailor attendance policies, shift patterns, report formats, and user permissions to fit your organization’s unique requirements. Moreover, IDONE is designed to comply with labor laws and industry standards, providing accurate records and reports that can help organizations meet regulatory requirements.",
 ];
 
 export default function FAQSection() {
@@ -63,28 +64,25 @@ export default function FAQSection() {
               return (
                 <div
                   key={idx}
-                  className={`rounded-md transition-all duration-100 border ${
-                    isOpen
+                  className={`rounded-md transition-all duration-100 border ${isOpen
                       ? "border-[#007BFF] border-[1.5px] bg-[#F0F7FF]"
                       : "border-blue-300"
-                  }`}
+                    }`}
                 >
                   <button
                     onClick={() => {
                       setOpenLeft(isOpen ? null : idx);
-                      setOpenRight(null); 
+                      setOpenRight(null);
                     }}
-                    className={`w-full text-left p-3 font-medium flex justify-between items-center ${
-                      isOpen ? "text-[#0043BD]" : "text-[#363636]"
-                    }`}
+                    className={`w-full text-left p-3 font-medium flex justify-between items-center ${isOpen ? "text-[#0043BD]" : "text-[#363636]"
+                      }`}
                   >
                     <span className="poppins-font text-[12px]">{question}</span>
                     <img
                       src={arrow_down}
                       alt="Toggle"
-                      className={`ml-2 w-5 h-5 transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
+                      className={`ml-2 w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                   {isOpen && (
@@ -104,28 +102,25 @@ export default function FAQSection() {
               return (
                 <div
                   key={idx}
-                  className={`rounded-md transition-all duration-300 border ${
-                    isOpen
+                  className={`rounded-md transition-all duration-300 border ${isOpen
                       ? "border-[#007BFF] border-[1.5px] bg-[#F0F7FF]"
                       : "border-blue-300"
-                  }`}
+                    }`}
                 >
                   <button
                     onClick={() => {
                       setOpenRight(isOpen ? null : idx);
-                      setOpenLeft(null); 
+                      setOpenLeft(null);
                     }}
-                    className={`w-full text-left p-3 font-medium flex justify-between items-center ${
-                      isOpen ? "text-[#0043BD]" : "text-[#363636]"
-                    }`}
+                    className={`w-full text-left p-3 font-medium flex justify-between items-center ${isOpen ? "text-[#0043BD]" : "text-[#363636]"
+                      }`}
                   >
                     <span className="poppins-font text-[12px]">{question}</span>
                     <img
                       src={arrow_down}
                       alt="Toggle"
-                      className={`ml-2 w-5 h-5 transition-transform duration-300 ${
-                        isOpen ? "rotate-180" : ""
-                      }`}
+                      className={`ml-2 w-5 h-5 transition-transform duration-300 ${isOpen ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
                   {isOpen && (
@@ -138,7 +133,18 @@ export default function FAQSection() {
             })}
           </div>
         </div>
+
+        <h2 className="text-[13px] mt-16 poppins-font text-center poppins-font text-[#2D2D2D  font-semibold uppercase mb-2">
+          Still have questions?
+        </h2>
+        <div className="flex items-center justify-center">
+          <button className="text-[13px] mt-2 bg-[#007BFF] shadow-xl hover:bg-[#0059B9] rounded-sm text-white px-4 py-2.5 flex items-center gap-2 poppins-font uppercase font-medium mb-2">
+            <span>Contact Our Experts</span>
+            <img src={arrow_back} alt="Arrow Back" className="w-4 h-4 font-bold" />
+          </button>
+
+        </div>
       </div>
     </div>
   );
-}
+} 
