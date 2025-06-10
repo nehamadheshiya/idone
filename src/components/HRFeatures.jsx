@@ -192,7 +192,7 @@ export default function HRFeatures() {
 
                     <div className="text-center lg:text-left max-w-screen-xl">
                         <div className="flex justify-center items-center lg:justify-start">
-                            <button className="flex items-center justify-center gap-2 px-8 poppins-font py-2.5 mb-6 rounded-sm text-xs font-medium text-[#007BFF] bg-[#D6EAFF]">
+                            <button className="flex items-center justify-center gap-2 px-4 poppins-font py-2.5 mb-6 rounded-sm text-xs font-medium text-[#007BFF] bg-[#D6EAFF]">
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
                                     className="h-4 w-4"

@@ -76,7 +76,7 @@ export default function WhyChooseUs() {
                     {cardData.map((item, index) => (
                         <div
                             key={index}
-                            className="group border border-[#58A9FF] hover:border-[#007BFF] hover:border-[1.5px] hover:shadow-2xl rounded-md lg:rounded-xl shadow p-3 lg:p-6 bg-[#F1F8FF] hover:bg-white transition-transform duration-300 transform-gpu hover:scale-105 origin-center will-change-transform"
+                            className="group border border-[#58A9FF] hover:border-[#007BFF] hover:border-[1.5px] hover:shadow-2xl rounded-md lg:rounded-xl shadow p-3 lg:p-6 bg-[#f5fafe] hover:bg-white transition-transform duration-300 transform-gpu hover:scale-105 origin-center will-change-transform"
                         >
                             <div className="w-8 h-8 lg:h-11 lg:w-11 rounded-md overflow-hidden mb-4 transition-all duration-300 group-hover:w-12 group-hover:h-12">
                                 <img

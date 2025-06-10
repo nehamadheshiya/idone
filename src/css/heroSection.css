@@ -42,7 +42,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #b2b2b2;
+  color: #B2B2B2;
 }
 
 .logo img {
@@ -162,7 +162,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.6rem 1.3rem;
+  padding: 0.60rem 1.3rem;
   border: 1px solid #686060;
   border-radius: 6px;
   font-size: 0.875rem;

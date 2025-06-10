@@ -87,7 +87,7 @@ export default function Navbar() {
 
         {menuOpen && (
           <div className="mobile-menu">
-            <a href="#">Features</a>
+            <a href="#">Features</a>roll
             <a href="#">Industries</a>
             <a href="#">About Us</a>
             <a href="#">Testimonials</a>
