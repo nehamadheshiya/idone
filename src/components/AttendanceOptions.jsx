@@ -93,20 +93,20 @@ export default function AttendanceOptions() {
         {/* Carousel for mobile, grid for lg */}
         <div
           ref={carouselRef}
-          className="flex lg:grid lg:grid-cols-5 gap-4 md:gap-5 lg:gap-3 overflow-x-auto hide-scrollbar scroll-smooth snap-x snap-mandatory"
+          className="flex lg:grid lg:grid-cols-5  gap-4 md:gap-5 lg:gap-3 overflow-x-auto hide-scrollbar scroll-smooth snap-x snap-mandatory"
         >
           {attendanceOptions.map((option, index) => (
             <div
               key={index}
-              className="group min-w-[75%]  snap-start lg:min-w-0 relative rounded-lg overflow-hidden  transition-all duration-300 lg:hover:scale-100"
+              className="group min-w-[75%]  snap-start lg:min-w-0 relative  overflow-hidden  transition-all duration-300 lg:hover:scale-100"
             >
-              <div className="w-full h-full transform transition-transform duration-500 lg:group-hover:scale-95">
+              <div className="w-full h-full  transform transition-transform duration-500 lg:group-hover:scale-95">
                 <img
                   src={option.image}
                   alt={option.title}
-                  className="w-full h-full object-cover"
+                  className="w-full rounded-md h-full object-cover"
                 />
-                <div className="absolute inset-0 flex flex-col justify-end items-start p-3 text-white bg-gradient-to-t from-black/60 via-transparent to-transparent">
+                <div className="absolute inset-0 flex flex-col justify-end items-start p-3 text-white  via-transparent to-transparent">
                   <h3 className="text-[15px] text-[#FFFFFF] poppins-font tracking-widest">
                     {option.title}
                   </h3>

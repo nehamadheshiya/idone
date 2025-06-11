@@ -56,9 +56,9 @@ export default function FAQSection() {
           Frequently Asked Questions
         </h1>
 
-        <div className="flex flex-col text-[#363636] lg:flex-row gap-6 justify-between">
+        <div className="flex flex-col text-[#363636] lg:flex-row gap-3 lg:gap-6 justify-between">
           {/* Left Column */}
-          <div className="flex-1 flex flex-col gap-4">
+          <div className="flex-1 flex flex-col gap-3 md:gap-4">
             {leftFAQs.map((question, idx) => {
               const isOpen = openLeft === idx;
               return (
@@ -96,7 +96,7 @@ export default function FAQSection() {
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 flex flex-col gap-4">
+          <div className="flex-1 flex flex-col  lg:mt-0 gap-3 md:gap-4">
             {rightFAQs.map((question, idx) => {
               const isOpen = openRight === idx;
               return (
@@ -132,6 +132,7 @@ export default function FAQSection() {
               );
             })}
           </div>
+          
         </div>
 
         <h2 className="text-[13px] mt-16 poppins-font text-center poppins-font text-[#2D2D2D  font-semibold uppercase mb-2">
