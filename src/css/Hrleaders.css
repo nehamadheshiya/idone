@@ -1,0 +1,252 @@
+.hrleaders-wrapper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: 570px;
+  background: linear-gradient(to bottom, #0e79ed, #05357f);
+  font-family: 'Poppins', sans-serif;
+  padding: 4rem 5rem;
+  color: white;
+}
+
+.left-content {
+  width: 50%;
+  max-width: 500px;
+  margin-top: 10vh;
+  padding-right: 2rem;
+}
+
+.right-content {
+  width: 50%;
+}
+
+.tagline {
+  text-transform: uppercase;
+  color: #a5c5ff;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.description {
+  color: #c0d7ff;
+  line-height: 1.5;
+}
+
+.cta-button {
+  background-color: white;
+  color: #0e79ed;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.right-content {
+  width: 66.6667%;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.testimonial-card {
+  background-color: white;
+  color: black;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  max-width: 360px;
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.quote-icon {
+  font-size: 3rem;
+  margin-top: -1rem;
+  color: #007bff;
+
+  /* margin-bottom: 0.5rem; */
+}
+
+.testimonial-text {
+  line-height: 1.5rem;
+  /* margin-bottom: 1rem; */
+}
+
+.testimonial-brand {
+  margin-top: 2vh;
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #0e79ed;
+}
+
+.testimonial-tagline {
+  font-size: 0.75rem;
+  color: #f45b69;
+}
+
+/* Marquee wrapper grid (3 cards up, 3 cards down) */
+.marquee-grid {
+  height: 570px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  overflow: hidden;
+  margin-left: auto;
+  margin-top: -4rem;
+  margin-bottom: -4rem;
+}
+
+/* === VERTICAL MARQUEE (UP) === */
+
+.marquee-content-vertical,
+.marquee-content-downward {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 20s linear infinite;
+  gap: 1.5rem;
+}
+
+.marquee-vertical {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.marquee-content-vertical {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-up 50s linear infinite;
+}
+
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+/* === VERTICAL MARQUEE (DOWN) === */
+.marquee-downward {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.marquee-content-downward {
+  display: flex;
+  flex-direction: column;
+  animation: scroll-down 50s linear infinite;
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.marquee-grid-mob {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .hrleaders-wrapper {
+    flex-direction: column;
+    padding: 2rem;
+  }
+
+  .left-content {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .marquee-grid {
+    display: none !important;
+  }
+
+  .marquee-grid-mob {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    margin-top: 2rem;
+    position: relative;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    white-space: nowrap;
+  }
+
+  .marquee-track {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: scroll-right 50s linear infinite;
+    gap: 1rem;
+  }
+
+  @keyframes scroll-right {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .horizontal-marquee {
+    display: flex;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .horizontal-marquee-content {
+    display: inline-flex;
+    animation: scroll-horizontal 40s linear infinite;
+    gap: 1rem;
+  }
+
+  @keyframes scroll-horizontal {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+
+  .testimonial-card {
+  min-width: 280px;
+  white-space: normal;
+  padding: 1.25rem;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.testimonial-text {
+  white-space: normal !important;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+
+}

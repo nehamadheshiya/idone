@@ -18,7 +18,7 @@
 
 .navbar.fixed {
   background: white;
-
+  border: 1px solid #E1E1E1;
   .logo {
     filter: invert();
   }
@@ -199,6 +199,10 @@
     display: none;
   }
 
+  .logo{
+    filter: invert();
+  }
+
   .nav-actions-mobile {
     display: block;
     padding-left: 40%;
@@ -222,9 +226,13 @@
     background: white !important;
   }
 
+  .navbar.fixed.logo{
+    
+  }
+
   .logo img {
     margin-top: -10px;
-    filter: invert();
+    /* filter: invert(); */
   }
 
   .menu-toggle {
