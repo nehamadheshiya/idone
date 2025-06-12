@@ -90,12 +90,16 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
   padding: 1rem;
-  font-size: 0.9rem;
-  background: linear-gradient(to bottom, #1b1d2e, #191e33);
+  background: white;
   position: relative;
-  margin-top: 4%;
+  margin-top: 2%;
+  width: 110%;
+  color: black;
+  margin-left: -5%;
+  padding-top: 10%;
+  padding-bottom: 10%;
 }
 
 .mobile-demo-button {
@@ -200,17 +204,17 @@
   }
 
   .logo{
-    filter: invert();
+    /* filter: invert(); */
   }
 
   .nav-actions-mobile {
     display: block;
     padding-left: 40%;
-    color: #000;
+    color: #fff;
   }
 
   .navbar {
-    background-color: #fff;
+    background: linear-gradient(to bottom, #1b1d2e, #191e33);
     height: 7vh;
     width: 100%;
     position: relative;
@@ -226,10 +230,7 @@
     background: white !important;
   }
 
-  .navbar.fixed.logo{
-    
-  }
-
+  
   .logo img {
     margin-top: -10px;
     /* filter: invert(); */
@@ -239,9 +240,9 @@
     display: block;
   }
 
-  .menux {
-    filter: invert();
-  }
+  /* .menux {
+    color: #FFFFFF;
+  } */
 
   .hero-title {
     font-size: 2rem;

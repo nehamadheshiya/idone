@@ -8,17 +8,29 @@ import '../css/heroSection.css'
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeIndex, setactiveIndex] = useState(0);
-
+  const [isScrolledOnMobile, setIsScrolledOnMobile] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (window.scrollY > 50) { // Adjust this threshold as needed
-        setIsFixed(true);
-      } else {
-        setIsFixed(false);
-      }
-    };
+   const handleScroll = () => {
+    const scrollY = window.scrollY;
+    const isMobile = window.innerWidth < 768;
+
+    if (scrollY > 50) {
+      setIsFixed(true);
+    } else {
+      setIsFixed(false);
+    }
+
+    if (isMobile) {
+      setIsScrolledOnMobile(scrollY > 50);
+    } else {
+      setIsScrolledOnMobile(false);
+    }
+
+    // 👇 Close menu on scroll
+    setMenuOpen(false);
+  };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
@@ -51,7 +63,7 @@ export default function Navbar() {
 
   return (<>
     <div className="hero-container">
-       <nav className={`navbar ${isFixed ? 'fixed' : ''}`}>
+      <nav className={`navbar ${isFixed ? 'fixed' : ''}`}>
         <div className="navbar-inner">
           <div className="logo">
             <img src={logo} alt="Logo" />
@@ -65,33 +77,53 @@ export default function Navbar() {
           </div>
 
           <div className="nav-actions">
-            <a href="#">Login</a>
-            <button className="demo-button font-[poppins]">Book Demo</button>
+            <a href="https://idone.in/">Login</a>
+            <a href="#booknow"><button className="demo-button font-[poppins]">Book Demo</button></a>
           </div>
 
           <div className="nav-actions-mobile">
-            <a href="#">Login</a>
+            <a
+              href="https://idone.in/"
+              className={`transition-colors duration-10 ${isScrolledOnMobile ? 'text-black' : 'text-white'
+                }`}
+            >
+              Login
+            </a>
           </div>
 
           <div className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
-            {menuOpen ? <X size={24} className='menux'/> : <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-              <mask id="mask0_1297_3113" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
-                <rect width="20" height="20" fill="#D9D9D9" />
-              </mask>
-              <g mask="url(#mask0_1297_3113)">
-                <path d="M7.5 15V13.3333H17.5V15H7.5ZM7.5 10.8333V9.16667H17.5V10.8333H7.5ZM2.5 6.66667V5H17.5V6.66667H2.5Z" fill="#1C1B1F" />
-              </g>
-            </svg>}
+            {menuOpen ? <X
+              size={24}
+              className={`menux transition-colors duration-300 ${isScrolledOnMobile ? 'text-black' : 'text-white'
+                }`}
+            />
+              : <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+              >
+                <mask id="mask0_1297_3113" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20">
+                  <rect width="20" height="20" fill="#D9D9D9" />
+                </mask>
+                <g mask="url(#mask0_1297_3113)">
+                  <path
+                    d="M7.5 15V13.3333H17.5V15H7.5ZM7.5 10.8333V9.16667H17.5V10.8333H7.5ZM2.5 6.66667V5H17.5V6.66667H2.5Z"
+                    fill={isScrolledOnMobile ? "#1C1B1F" : "#FFFFFF"}
+                  />
+                </g>
+              </svg>
+            }
           </div>
         </div>
 
         {menuOpen && (
-          <div className="mobile-menu">
-            <a href="#">Features</a>roll
+          <div className="mobile-menu text-sm font-['poppins]">
+            <a href="#">Features</a>
             <a href="#">Industries</a>
             <a href="#">About Us</a>
             <a href="#">Testimonials</a>
-            <button className="mobile-demo-button font-[poppins]">Book Demo</button>
           </div>
         )}
       </nav>
@@ -101,10 +133,10 @@ export default function Navbar() {
           <h1 className="hero-title">
             Smarter HR.<br />Seamless Attendance.
           </h1>
-          <p className="hero-subtitle font-['poppins']">
+          <p className="hero-subtitle font-[poppins] font-normal">
             Save hours on routine tasks, payroll errors, and leave requests with real-time attendance and workforce automation.
           </p>
-          <button className="hero-button font-[poppins] text-sm font-medium">Book Demo</button>
+          <a href='#booknow'><button className="hero-button font-[poppins] text-sm font-medium">Book Demo</button></a>
         </div>
 
         <div className="method-buttons">

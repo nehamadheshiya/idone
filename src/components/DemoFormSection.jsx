@@ -5,6 +5,7 @@ export default function DemoFormSection() {
         <div
             className=" gap-4 lg:gap-32 flex flex-col md:flex-row items-center justify-center px-4 py-12 md:py-16"
             style={{ background: 'linear-gradient(0deg, #05357F 0%, #0E79ED 100%)' }}
+            id='booknow'
         >
             <style>
                 {`

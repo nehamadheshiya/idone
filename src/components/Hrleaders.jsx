@@ -16,7 +16,7 @@ export default function Hrleaders() {
                 <p className="tagline mb-4 font-[poppins] text-sm">
                     From those who’ve experienced the IDONE difference
                 </p>
-                <h2 className='heading mb-4 font-[poppins] font-light font-xl'>
+                <h2 className='heading mb-4 font-[poppins] font-light text-lg'>
                     What HR Leaders <br /> Are Saying
                 </h2>
                 <p className='description mb-6 text-xs'>
