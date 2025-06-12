@@ -47,7 +47,7 @@ const industries = [
 ];
 
 const IndustryCard = ({ title, image, description, features }) => (
-  <div className="group border border-[#7DBBFF] hover:border-[#007BFF] hover:border-[1.5px] hover:shadow-2xl rounded-xl shadow p-4 lg:p-6 bg-white transition-transform duration-300 transform hover:scale-105 origin-left">
+  <div className="group border border-[#7DBBFF] hover:border-[#007BFF] hover:border-[1.5px] hover:shadow-2xl rounded-xl shadow p-4 lg:p-6 bg-white transition-transform duration-300 transform hover:scale-105">
     <style>{`
       @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
@@ -70,7 +70,7 @@ const IndustryCard = ({ title, image, description, features }) => (
     `}</style>
 
     <div className="flex items-center gap-3 lg:block">
-      <div className="w-11 h-11 rounded-md overflow-hidden group-hover:w-12 group-hover:h-12">
+      <div className="w-11 h-11 rounded-md overflow-hidden transition-transform duration-300 transform group-hover:scale-110">
         <img src={image} alt={title} className="w-full h-full object-contain" />
       </div>
       <h3 className="text-[14px] font-semibold poppins-font transition-all duration-300 group-hover:text-blue-600 mt-0 lg:mt-4">
@@ -90,6 +90,7 @@ const IndustryCard = ({ title, image, description, features }) => (
     </ul>
   </div>
 );
+
 
 const IndustriesGrid = () => {
   return (
