@@ -135,8 +135,8 @@ export default function FAQSection() {
           
         </div>
 
-        <h2 className="text-[13px] mt-16 poppins-font text-center poppins-font text-[#2D2D2D  font-semibold uppercase mb-2">
-          Still have questions?
+        <h2 className="text-[13px] mt-16 poppins-font text-center poppins-font text-[#2D2D2D  font-semibold  mb-2">
+          Still Have Questions?
         </h2>
         <div className="flex items-center justify-center">
           <button className="text-[13px] mt-2 bg-[#007BFF] shadow-xl hover:bg-[#0059B9] rounded-sm text-white px-4 py-2.5 flex items-center gap-2 poppins-font uppercase font-medium mb-2">

@@ -41,7 +41,7 @@ const BusinessImpactStats = () => {
                     <div className="hover-card">
                         <div className="text-4xl font-semibold text-[#DBD2FF] main-number">98%</div>
                         <div className="text-[14px] text-[#F0F0F0] font-medium mt-2">Reduction in Manual Errors</div>
-                        <p className="text-[11px] text-[#D2D2D2] mt-1">Reduce new hire paperwork time</p>
+                        <p className="text-[11px] text-[#D2D2D2] mt-1">We eliminated nearly all data discrepancies for clients </p>
                     </div>
 
                     {/* Item 2 */}

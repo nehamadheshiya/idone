@@ -1,5 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import iPhone1 from '../assets/iPhone1.png';
+
+import attendance from "../assets/attendance.png";
+import payroll from "../assets/payroll.png";
+import leave from "../assets/leave.png";
+import timetable from "../assets/timetable.png";
+import userinterface from "../assets/userinterface.png";
+import assets from "../assets/assets.png";
+
 import {
     User2,
     Check,
@@ -14,74 +21,88 @@ const tabs = [
     {
         id: 'attendance',
         label: 'Attendance',
-        image: iPhone1,
-        title: 'Real-Time And Error-Free Attendance Capture',
+        labe2: 'Biometric Attendance',
+        image: attendance,
+        title: 'Real-time and Error-free Attendance Capture',
         description:
             'Capture employee attendance with Fingerprint, Palm-Vein, QR Code and IRIS scans. Facilitate Free-flow Attendance with real-time, accurate Facial Recognition.',
     },
     {
         id: 'payroll',
         label: 'Payroll',
-        image: iPhone1,
-        title: 'Seamless Payroll Management',
+        labe2: 'Effortless Payroll',
+        image: payroll,
+        title: 'Automated Payroll Integration',
         description:
-            'Automate salary disbursement, tax calculations, and payslip generation effortlessly with real-time updates.',
+            'Generate and export Payroll data to external databases with easy integrations. No more end-of-month late hours for your team.',
     },
     {
         id: 'leave',
         label: 'Leave',
-        image: iPhone1,
-        title: 'Smart Leave Tracking',
+        labe2: 'Accurate Leave Log',
+        image: leave,
+        title: 'Smart Leave Monitoring',
         description:
-            'Submit, approve, and track leave requests with intelligent rules and calendar sync.',
+            'Manage Casual Leave, Earned Leave, Sick Leave, Compensatory Off, LOP, Holiday Lists – all in one place. You no longer need to manage leave balances manually.',
     },
     {
         id: 'timetable',
         label: 'Timetable',
-        image: iPhone1,
-        title: 'Flexible Timetable Management',
+        labe2: 'Timetables Simplified',
+        image: timetable,
+        title: 'Efficient Timetable & Roster Management',
         description:
-            'Design, assign and update employee timetables in real-time with ease.',
+            'Optimise resource allocation by assigning employee shifts, managing employee availability, handling time-off requests, while adhering to labor laws.',
     },
     {
         id: 'ui',
         label: 'User Interface',
-        image: iPhone1,
-        title: 'Modern User Interface',
+        labe2: 'Mobile-First HRMS',
+        image: userinterface,
+        title: 'User-friendly Web and Mobile App',
         description:
-            'Enjoy a sleek, intuitive and accessible UI for faster operations and better user experience.',
+            'Access HR tasks anytime, anywhere with IDONE’s intuitive web and mobile apps — designed for ease, speed, and a seamless experience across all your devices.',
     },
     {
         id: 'assets',
         label: 'Assets',
-        image: iPhone1,
-        title: 'Track Company Assets Efficiently',
+        labe2: 'Centralized Control',
+        image: assets,
+        title: 'Document & Asset Management',
         description:
-            'Manage company-owned devices, licenses and inventory with powerful asset tracking.',
+            'Easily assign, track, and manage company assets for every employee. Gain full visibility and control from onboarding to offboarding — all in one centralized, hassle-free platform.',
     },
 ];
+
+const iconMap = {
+    attendance: (
+        <div className="relative inline-block w-5 h-5">
+            <User2 className="w-5 h-5" />
+            <Check className="absolute -bottom-1 -right-1 w-3 h-3 rounded-full" />
+        </div>
+    ),
+    payroll: <IndianRupee className="w-4 h-4" />,
+    leave: <LogOut className="w-4 h-4" />,
+    timetable: <CalendarDays className="w-4 h-4" />,
+    ui: <Monitor className="w-4 h-4" />,
+    assets: <ImageIcon className="w-4 h-4" />,
+};
+
+const imageWidthMap = {
+    attendance: 'w-[300px] md:w-[400px] lg:w-[470px]',
+    payroll: 'w-[220px] md:w-[340px] lg:w-[350px]',
+    leave: 'w-[350px] md:w-[400px] lg:w-[560px]',
+    timetable: 'w-[340px] md:w-[460px] lg:w-[530px]',
+    ui: 'w-[360px] md:w-[480px] lg:w-[560px]',
+    assets: 'w-[250px] md:w-[350px] lg:w-[400px]',
+};
+
 
 export default function HRFeatures() {
     const [activeIndex, setActiveIndex] = useState(0);
     const intervalRef = useRef(null);
-
-    // New refs
     const scrollContainerRef = useRef(null);
     const buttonRefs = useRef([]);
-
-    const iconMap = {
-        attendance: (
-            <div className="relative inline-block w-5 h-5">
-                <User2 className="w-5 h-5" />
-                <Check className="absolute -bottom-1 -right-1 w-3 h-3 rounded-full" />
-            </div>
-        ),
-        payroll: <IndianRupee className="w-4 h-4" />,
-        leave: <LogOut className="w-4 h-4" />,
-        timetable: <CalendarDays className="w-4 h-4" />,
-        ui: <Monitor className="w-4 h-4" />,
-        assets: <ImageIcon className="w-4 h-4" />,
-    };
 
     const setTab = (index) => {
         setActiveIndex(index);
@@ -100,22 +121,18 @@ export default function HRFeatures() {
         return () => clearInterval(intervalRef.current);
     }, []);
 
-
     useEffect(() => {
         if (window.innerWidth < 640 && buttonRefs.current[activeIndex]) {
-            if (scrollContainerRef.current && buttonRefs.current[activeIndex]) {
-                const container = scrollContainerRef.current;
-                const button = buttonRefs.current[activeIndex];
-                const containerRect = container.getBoundingClientRect();
-                const buttonRect = button.getBoundingClientRect();
-                const offset = buttonRect.left - containerRect.left + container.scrollLeft - container.clientWidth / 2 + button.clientWidth / 2;
+            const container = scrollContainerRef.current;
+            const button = buttonRefs.current[activeIndex];
+            const containerRect = container.getBoundingClientRect();
+            const buttonRect = button.getBoundingClientRect();
+            const offset = buttonRect.left - containerRect.left + container.scrollLeft - container.clientWidth / 2 + button.clientWidth / 2;
 
-                container.scrollTo({
-                    left: offset,
-                    behavior: 'smooth',
-                });
-            }
-
+            container.scrollTo({
+                left: offset,
+                behavior: 'smooth',
+            });
         }
     }, [activeIndex]);
 
@@ -124,7 +141,6 @@ export default function HRFeatures() {
     return (
         <div className="bg-gradient-to-b from-[#F8FAFF] to-[#D9E6FF]">
             <div className="lg:px-32 px-4 pb-14 pt-12 max-w-screen-xl mx-auto">
-                {/* Tailwind + Custom Style */}
                 <style>
                     {`
                         .no-scrollbar::-webkit-scrollbar {
@@ -183,31 +199,23 @@ export default function HRFeatures() {
                 </div>
 
                 {/* Tab Content */}
-                <div className="flex flex-col mt-16 lg:flex-row items-center justify-between gap-8 transition-all duration-300">
-                    <img
-                        src={activeTab.image}
-                        alt={activeTab.label}
-                        className="w-[300px] md:w-[432px] lg:w-[647px]"
-                    />
+                <div className="flex flex-col mt-16 lg:flex-row items-center justify-between  transition-all duration-300">
 
+                    {/* LEFT: Fixed-width container for image */}
+                    <div className="lg:w-[110%] flex justify-center items-center">
+                        <img
+                            src={activeTab.image}
+                            alt={activeTab.label}
+                            className={`${imageWidthMap[activeTab.id]} transition-all duration-300`}
+                        />
+                    </div>
+
+                    {/* RIGHT: Text and content */}
                     <div className="text-center lg:text-left max-w-screen-xl">
                         <div className="flex justify-center items-center lg:justify-start">
                             <button className="flex items-center justify-center gap-2 px-4 poppins-font py-2.5 mb-6 rounded-sm text-xs font-medium text-[#007BFF] bg-[#D6EAFF]">
-                                <svg
-                                    xmlns="http://www.w3.org/2000/svg"
-                                    className="h-4 w-4"
-                                    fill="none"
-                                    viewBox="0 0 24 24"
-                                    stroke="currentColor"
-                                >
-                                    <path
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                        strokeWidth={2}
-                                        d="M5.121 17.804A4 4 0 017 16h10a4 4 0 011.879.496M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                                    />
-                                </svg>
-                                {activeTab.label}
+                                {iconMap[activeTab.id]}
+                                {activeTab.labe2}
                             </button>
                         </div>
 
@@ -219,6 +227,7 @@ export default function HRFeatures() {
                         </p>
                     </div>
                 </div>
+
             </div>
         </div>
     );
