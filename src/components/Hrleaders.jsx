@@ -1,12 +1,58 @@
 import React from 'react';
 import '../css/Hrleaders.css';
+import core from '../assets/images/core.png'
+import team from '../assets/images/team.png'
+import orion from '../assets/images/orion.png'
+import labour from '../assets/images/labour.png'
+import quess from '../assets/images/quess.svg'
+import niam from '../assets/images/niam.svg'
 
 export default function Hrleaders() {
     const testimonials = [
-        "We Were Finding It Difficult To Manually Track Attendance Across Our Field Offices In Different Cities. With IDONE, Now We Have A Centralised Monitoring Of Attendance And Leave Records.",
-        "IDONE Transformed Our HR Operations. Attendance And Payroll Sync In Real-Time—Zero Manual Follow-Ups, And Morale’s Never Been Higher.",
-        "IDone Helped Us Reduce Our Attrition Rates By Disbursing Salaries Timely.",
+        {
+            text: "IDONE Transformed Our HR Operations. Attendance And Payroll Sync In Real-Time—Zero Manual Follow-Ups, And Morale’s Never Been Higher.",
+            brandLogo: quess,
+            // tagline: "WINNING TOGETHER",
+            // brandColor: "#1D4ED8",
+            // taglineColor: "#6B7280",
+        },
+        {
+            text: "IDone Helped Us Reduce Our Attrition Rates By Disbursing Salaries Timely.",
+            brandLogo: niam,
+            // tagline: "redefining learning",
+            // brandColor: "#10B981",
+            // taglineColor: "#4B5563",
+        },
+        {
+            text: "We Were Finding It Difficult To Manually Track Attendance Across Our Field Offices In Different Cities. With IDONE, Now We Have A Centralised Monitoring Of Attendance And Leave Records.",
+            brandLogo: labour,
+            // tagline: "smart business tools",
+            // brandColor: "#F59E0B",
+            // taglineColor: "#374151",
+        },
+        {
+            text: "Earlier there used to be a lot of discrepancies during compliance audits. With IDONE, we have been able to organise our employee record so neatly that audits are hassle free.",
+            brandLogo: orion,
+            // tagline: "audit made easy",
+            // brandColor: "#EF4444", // Tailwind red-500
+            // taglineColor: "#6B7280",
+        },
+        {
+            text: "IDONE has been more than an HRMS for us. It’s the go to platform for our employees to raise all requests.",
+            brandLogo: core,
+            // tagline: "your HR partner",
+            // brandColor: "#6366F1", 
+            // taglineColor: "#6B7280",
+        },
+        {
+            text: "We have been quite happy with how IDONE has helped streamline our employees’ attendance records and payrolling.",
+            brandLogo: team,
+            // tagline: "caring for workforce",
+            // brandColor: "#3B82F6", // Tailwind blue-500
+            // taglineColor: "#6B7280",
+        },
     ];
+
 
 
     return (
@@ -36,28 +82,57 @@ export default function Hrleaders() {
                 {/* Left - Scroll Up */}
                 <div className="marquee-vertical">
                     <div className="marquee-content-vertical">
-                        {Array(6).fill(testimonials).flat().map((text, i) => (
-                            <div key={`up-${i}`} className="testimonial-card">
+                        {testimonials.map((item, i) => (
+                            <div key={i} className="testimonial-card">
                                 <div className="quote-icon">❝</div>
-                                <p className="testimonial-text font-[poppins] font-normal text-xs">{text}</p>
-                                <div className="testimonial-brand">NIAM™</div>
-                                <p className="testimonial-tagline">redefining learning</p>
+
+                                {/* This is valid: item.text is a string */}
+                                <p className="testimonial-text font-[poppins] text-xs font-normal">{item.text}</p>
+
+                                {/* This is valid: item.brandLogo is a JSX element like <svg> */}
+                                <img
+                                    src={item.brandLogo || ""}
+                                    alt="Brand logo"
+                                    className="w-auto"
+                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
+                                />
+
+                                {/* This is valid: item.tagline is a string */}
+                                <p className="testimonial-tagline" style={{ color: item.taglineColor }}>
+                                    {item.tagline}
+                                </p>
                             </div>
                         ))}
+
                     </div>
+
                 </div>
 
                 {/* Right - Scroll Down */}
                 <div className="marquee-downward">
                     <div className="marquee-content-downward">
-                        {Array(6).fill(testimonials).flat().map((text, i) => (
-                            <div key={`down-${i}`} className="testimonial-card">
+                        {testimonials.map((item, i) => (
+                            <div key={i} className="testimonial-card">
                                 <div className="quote-icon">❝</div>
-                                <p className="testimonial-text font-[poppins] font-normal text-xs">{text}</p>
-                                <div className="testimonial-brand">NIAM™</div>
-                                <p className="testimonial-tagline">redefining learning</p>
+
+                                {/* This is valid: item.text is a string */}
+                                <p className="testimonial-text font-[poppins] text-xs font-normal">{item.text}</p>
+
+                                {/* This is valid: item.brandLogo is a JSX element like <svg> */}
+                               <img
+                                    src={item.brandLogo || ""}
+                                    alt="Brand logo"
+                                    className="w-auto"
+                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
+                                />
+
+                                {/* This is valid: item.tagline is a string */}
+                                <p className="testimonial-tagline" style={{ color: item.taglineColor }}>
+                                    {item.tagline}
+                                </p>
                             </div>
                         ))}
+
                     </div>
                 </div>
 
@@ -65,18 +140,37 @@ export default function Hrleaders() {
 
 
             {/* Mobile Marquee (Right Scroll) */}
-            <div className="marquee-grid-mob ">
+            <div className="marquee-grid-mob">
                 <div className="marquee-track">
-                    {Array(4).fill(testimonials).flat().map((text, i) => (
+                    {testimonials.map((item, i) => (
                         <div key={`mob-${i}`} className="testimonial-card">
                             <div className="quote-icon">❝</div>
-                            <p className="testimonial-text font-[poppins] font-normal text-xs">{text}</p>
-                            <div className="testimonial-brand">NIAM™</div>
-                            <p className="testimonial-tagline">redefining learning</p>
+
+                            {/* Use the testimonial text */}
+                            <p className="testimonial-text font-[poppins] font-normal text-xs">
+                                {item.text}
+                            </p>
+
+                            {/* Brand logo (can be SVG, <img>, or JSX) */}
+                            <img
+                                    src={item.brandLogo || ""}
+                                    alt="Brand logo"
+                                    className="w-auto"
+                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
+                                />
+
+                            {/* Tagline with custom color */}
+                            <p
+                                className="testimonial-tagline"
+                                style={{ color: item.taglineColor }}
+                            >
+                                {item.tagline}
+                            </p>
                         </div>
                     ))}
                 </div>
             </div>
+
 
 
         </div>
