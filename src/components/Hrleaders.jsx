@@ -12,11 +12,12 @@ export default function Hrleaders() {
     return (
         <div className='hrleaders-wrapper flex flex-row text-white px-22 py-16'>
             {/* Left Section */}
-            <div className='left-content px-14'>
+            <div className="left-content px-4 flex flex-col items-center text-center lg:block lg:text-left lg:items-start lg:px-14">
+
                 <p className="tagline mb-4 font-[poppins] text-sm">
                     From those who’ve experienced the IDONE difference
                 </p>
-                <h2 className='heading mb-4 font-[poppins] font-light font-xl'>
+                <h2 className='heading mb-4 font-[poppins] font-light text-lg'>
                     What HR Leaders <br /> Are Saying
                 </h2>
                 <p className='description mb-6 text-xs'>

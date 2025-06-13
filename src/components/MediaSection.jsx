@@ -9,7 +9,7 @@ import dna from '../assets/dna.png';
 
 const MediaSection = () => {
     return (
-        <section className="bg-[#F3F5FF] py-12 text-center">
+        <section className="bg-[#F3F5FF] pt-12 pb-30 text-center">
               <style>
         {`
          
