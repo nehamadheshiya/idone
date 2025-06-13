@@ -17,7 +17,7 @@ export default function DemoFormSection() {
             {/* Left Text Content */}
             <div className="text-white poppins-font  text-center md:text-left md:max-w-lg md:pr-16 mb-10 md:mb-0">
                 <div className="inline-block  text-xs font-extralight bg-white/20 text-[#f2efef] px-4 py-2.5 rounded-full backdrop-blur-sm mb-4 lg:mb-8">
-                    🔒 Trusted by 500+ Global Companies
+                    🔒 Trusted by 500+ Organisations
                 </div>
 
                 <h1 className="text-xl sm:text-[32px] font-semibold leading-snug mb-4 lg:mb-10">
@@ -30,7 +30,7 @@ export default function DemoFormSection() {
                 </p>
                 <div className="flex text-[#C6C6C6] flex-wrap justify-center md:justify-start gap-4 text-sm">
                     <div className="flex items-center gap-2">
-                        ✅ <span>14 Day Free Trial</span>
+                        ✅ <span>Start With a Trial</span>
                     </div>
                     <div className="flex items-center gap-2">
                         💸 <span>No Setup Fees</span>
@@ -51,7 +51,7 @@ export default function DemoFormSection() {
 
                  
                     <div className="flex flex-col text-xs space-y-1">
-                        <label className="text-[#101010] text-[13px] font-medium">Full Name</label>
+                        <label className="text-[#101010] text-[13px] font-light">Full Name</label>
                         <input
                             type="text"
                             className="w-full border text-[#101010] border-[#C7C7C7] px-2 py-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -60,7 +60,7 @@ export default function DemoFormSection() {
 
                   
                     <div className="flex flex-col text-xs space-y-1">
-                        <label className="text-[#101010] text-[13px] font-medium">Work Email</label>
+                        <label className="text-[#101010] text-[13px] font-light">Work Email</label>
                         <input
                             type="email"
                             className="w-full border text-[#101010] border-[#C7C7C7] px-4 py-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -69,7 +69,7 @@ export default function DemoFormSection() {
 
                   
                     <div className="flex flex-col text-xs space-y-1">
-                        <label className="text-[#101010] text-[13px] font-medium">Phone Number</label>
+                        <label className="text-[#101010] text-[13px] font-light">Phone Number</label>
                         <div className="flex gap-2">
                             <select className="w-[20%] border border-gray-300 px-2 py-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500">
                                 <option value="in">IN</option>
@@ -84,7 +84,7 @@ export default function DemoFormSection() {
 
            
                     <div className="flex flex-col text-xs space-y-1">
-                        <label className="text-[#101010] text-[13px] font-medium">Company Name</label>
+                        <label className="text-[#101010] text-[13px] font-light">Company Name</label>
                         <input
                             type="text"
                             className="w-full border text-[#101010] border-[#C7C7C7] px-4 py-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -93,7 +93,8 @@ export default function DemoFormSection() {
 
              
                     <div className="flex flex-col text-xs space-y-1">
-                        <label className="text-[#101010] text-[13px] font-medium">Company Size (Employees)</label>
+                        <label className="text-[#101010] text-[13px] font-light">Company size (employees)</label>
+
                         <input
                             type="text"
                             className="w-full border text-[#101010] border-[#C7C7C7] px-4 py-2 rounded-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
