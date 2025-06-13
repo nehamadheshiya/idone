@@ -10,31 +10,77 @@ export default function Navbar() {
   const [activeIndex, setactiveIndex] = useState(0);
   const [isScrolledOnMobile, setIsScrolledOnMobile] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
+  const [showLoginModal, setShowLoginModal] = useState(false);
+  const [companyCode, setCompanyCode] = useState('');
+  const [userId, setUserId] = useState('');
+  const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
+  const [showPassword, setShowPassword] = useState(false);
+
+
+
 
   useEffect(() => {
-   const handleScroll = () => {
-    const scrollY = window.scrollY;
-    const isMobile = window.innerWidth < 768;
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      const isMobile = window.innerWidth < 768;
 
-    if (scrollY > 50) {
-      setIsFixed(true);
-    } else {
-      setIsFixed(false);
-    }
+      if (scrollY > 50) {
+        setIsFixed(true);
+      } else {
+        setIsFixed(false);
+      }
 
-    if (isMobile) {
-      setIsScrolledOnMobile(scrollY > 50);
-    } else {
-      setIsScrolledOnMobile(false);
-    }
+      if (isMobile) {
+        setIsScrolledOnMobile(scrollY > 50);
+      } else {
+        setIsScrolledOnMobile(false);
+      }
 
-    // 👇 Close menu on scroll
-    setMenuOpen(false);
-  };
+      // 👇 Close menu on scroll
+      setMenuOpen(false);
+    };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+
+  const handleLogin = (e) => {
+    e.preventDefault();
+    setError('');
+    setLoading(true);
+
+    try {
+
+      const form = document.createElement('form');
+      form.method = 'POST';
+      form.action = 'https://idone.in/Login.do?operation=doLogin';
+
+      const inputs = [
+        { name: 'txtCmpCd', value: companyCode },
+        { name: 'txtLoginId', value: userId },
+        { name: 'txtPassword', value: password },
+      ];
+
+      inputs.forEach(({ name, value }) => {
+        const input = document.createElement('input');
+        input.type = 'hidden';
+        input.name = name;
+        input.value = value;
+        form.appendChild(input);
+      });
+
+      document.body.appendChild(form);
+      form.submit();
+    } catch (err) {
+      console.error(err);
+      setError('Something went wrong. Please try again.');
+      setLoading(false);
+    }
+  };
+
 
 
   const methods = [
@@ -62,7 +108,157 @@ export default function Navbar() {
   }, []);
 
   return (<>
-    <div className="hero-container">
+    <div className="hero-container font-[poppins]">
+      {showLoginModal && (
+        <div className="fixed inset-0 bg-black/30 backdrop-blur-sm z-50 flex items-center justify-center ">
+          <div className="bg-white p-6 rounded-xl w-full lg:max-w-[25%] md:max-w-[80%] mx-4 shadow-xl relative">
+
+            {/* Close button */}
+            <button
+              className="absolute top-4 right-4 text-gray-500 text-2xl hover:text-black"
+              onClick={() => setShowLoginModal(false)}
+            >
+              &times;
+            </button>
+
+
+            <h2 className="text-center text-black mb-1 font-[poppins] font-medium text-xl">Welcome Back</h2>
+            <p className="text-sm text-center text-gray-500 mb-8 font-normal">Sign in to access your dashboard</p>
+
+
+            <form className="space-y-4" onSubmit={handleLogin}>
+
+              {/* Company Code */}
+              <div>
+                <label className="block text-sm font-normal font-[poppins] text-[#434343] mb-1">Company Code</label>
+                <div className="relative">
+                  <span className="absolute left-3 top-2.5 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask id="mask0_1616_879" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <rect width="16" height="16" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_1616_879)">
+                        <path d="M1.33203 14V2H7.9987V4.66667H14.6654V14H1.33203ZM2.66536 12.6667H6.66536V11.3333H2.66536V12.6667ZM2.66536 10H6.66536V8.66667H2.66536V10ZM2.66536 7.33333H6.66536V6H2.66536V7.33333ZM2.66536 4.66667H6.66536V3.33333H2.66536V4.66667ZM7.9987 12.6667H13.332V6H7.9987V12.6667ZM9.33203 8.66667V7.33333H11.9987V8.66667H9.33203ZM9.33203 11.3333V10H11.9987V11.3333H9.33203Z" fill="#9A9A9A" />
+                      </g>
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    value={companyCode}
+                    onChange={(e) => setCompanyCode(e.target.value)}
+                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded text-sm text-black"
+                    placeholder="Enter Company Code"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* User ID */}
+              <div>
+                <label className="block text-sm font-normal font-[poppins] text-[#434343] mb-1">User ID</label>
+                <div className="relative">
+                  <span className="absolute left-3 top-2.5 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask id="mask0_1616_5218" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <rect width="16" height="16" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_1616_5218)">
+                        <path d="M8.0013 7.99935C7.26797 7.99935 6.64019 7.73824 6.11797 7.21602C5.59575 6.69379 5.33464 6.06602 5.33464 5.33268C5.33464 4.59935 5.59575 3.97157 6.11797 3.44935C6.64019 2.92713 7.26797 2.66602 8.0013 2.66602C8.73463 2.66602 9.36241 2.92713 9.88463 3.44935C10.4069 3.97157 10.668 4.59935 10.668 5.33268C10.668 6.06602 10.4069 6.69379 9.88463 7.21602C9.36241 7.73824 8.73463 7.99935 8.0013 7.99935ZM2.66797 13.3327V11.466C2.66797 11.0882 2.76519 10.741 2.95964 10.4243C3.15408 10.1077 3.41241 9.86602 3.73464 9.69935C4.42352 9.3549 5.12352 9.09657 5.83464 8.92435C6.54575 8.75213 7.26797 8.66602 8.0013 8.66602C8.73463 8.66602 9.45686 8.75213 10.168 8.92435C10.8791 9.09657 11.5791 9.3549 12.268 9.69935C12.5902 9.86602 12.8485 10.1077 13.043 10.4243C13.2374 10.741 13.3346 11.0882 13.3346 11.466V13.3327H2.66797ZM4.0013 11.9993H12.0013V11.466C12.0013 11.3438 11.9707 11.2327 11.9096 11.1327C11.8485 11.0327 11.768 10.9549 11.668 10.8993C11.068 10.5993 10.4624 10.3743 9.8513 10.2243C9.24019 10.0743 8.62352 9.99935 8.0013 9.99935C7.37908 9.99935 6.76241 10.0743 6.1513 10.2243C5.54019 10.3743 4.93464 10.5993 4.33464 10.8993C4.23464 10.9549 4.15408 11.0327 4.09297 11.1327C4.03186 11.2327 4.0013 11.3438 4.0013 11.466V11.9993ZM8.0013 6.66602C8.36797 6.66602 8.68186 6.53546 8.94297 6.27435C9.20408 6.01324 9.33463 5.69935 9.33463 5.33268C9.33463 4.96602 9.20408 4.65213 8.94297 4.39102C8.68186 4.1299 8.36797 3.99935 8.0013 3.99935C7.63463 3.99935 7.32075 4.1299 7.05964 4.39102C6.79852 4.65213 6.66797 4.96602 6.66797 5.33268C6.66797 5.69935 6.79852 6.01324 7.05964 6.27435C7.32075 6.53546 7.63463 6.66602 8.0013 6.66602Z" fill="#878787" />
+                      </g>
+                    </svg>
+                  </span>
+                  <input
+                    type="text"
+                    value={userId}
+                    onChange={(e) => setUserId(e.target.value)}
+                    className="w-full pl-10 pr-3 py-2 border border-gray-300 rounded text-sm text-black"
+                    placeholder="Enter User ID"
+                    required
+                  />
+                </div>
+              </div>
+
+              {/* Password */}
+              <div>
+                <label className="block text-sm font-normal font-[poppins] text-[#434343] mb-1">Password</label>
+                <div className="relative">
+                  {/* Left icon */}
+                  <span className="absolute left-3 top-2.5 text-gray-400">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                      <mask id="mask0_1616_4373" maskUnits="userSpaceOnUse" x="0" y="0" width="16" height="16">
+                        <rect width="16" height="16" fill="#D9D9D9" />
+                      </mask>
+                      <g mask="url(#mask0_1616_4373)">
+                        <path d="M4.0013 14.666C3.63464 14.666 3.32075 14.5355 3.05964 14.2743C2.79852 14.0132 2.66797 13.6993 2.66797 13.3327V6.66602C2.66797 6.29935 2.79852 5.98546 3.05964 5.72435C3.32075 5.46324 3.63464 5.33268 4.0013 5.33268H4.66797V3.99935C4.66797 3.07713 4.99297 2.29102 5.64297 1.64102C6.29297 0.991016 7.07908 0.666016 8.0013 0.666016C8.92352 0.666016 9.70964 0.991016 10.3596 1.64102C11.0096 2.29102 11.3346 3.07713 11.3346 3.99935V5.33268H12.0013C12.368 5.33268 12.6819 5.46324 12.943 5.72435C13.2041 5.98546 13.3346 6.29935 13.3346 6.66602V13.3327C13.3346 13.6993 13.2041 14.0132 12.943 14.2743C12.6819 14.5355 12.368 14.666 12.0013 14.666H4.0013ZM4.0013 13.3327H12.0013V6.66602H4.0013V13.3327ZM8.0013 11.3327C8.36797 11.3327 8.68186 11.2021 8.94297 10.941C9.20408 10.6799 9.33463 10.366 9.33463 9.99935C9.33463 9.63268 9.20408 9.31879 8.94297 9.05768C8.68186 8.79657 8.36797 8.66602 8.0013 8.66602C7.63463 8.66602 7.32075 8.79657 7.05964 9.05768C6.79852 9.31879 6.66797 9.63268 6.66797 9.99935C6.66797 10.366 6.79852 10.6799 7.05964 10.941C7.32075 11.2021 7.63463 11.3327 8.0013 11.3327ZM6.0013 5.33268H10.0013V3.99935C10.0013 3.44379 9.80686 2.97157 9.41797 2.58268C9.02908 2.19379 8.55686 1.99935 8.0013 1.99935C7.44575 1.99935 6.97352 2.19379 6.58464 2.58268C6.19575 2.97157 6.0013 3.44379 6.0013 3.99935V5.33268Z" fill="#9A9A9A" />
+                      </g>
+                    </svg>
+                  </span>
+
+                  {/* Input */}
+                  <input
+                    type={showPassword ? 'text' : 'password'}
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    className="w-full pl-10 pr-10 py-2 border border-gray-300 rounded text-sm text-black"
+                    placeholder="Enter Password"
+                    required
+                  />
+
+                  {/* Right toggle icon */}
+                  <span
+                    className="absolute right-3 top-2.5 text-gray-400 cursor-pointer"
+                    onClick={() => setShowPassword(prev => !prev)}
+                  >
+                    {showPassword ? (
+                      // Eye-off icon
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13.875 18.825A10.05 10.05 0 0112 19c-4.477 0-8.268-2.943-9.542-7a10.05 10.05 0 012.422-3.718M9.88 9.88A3 3 0 0112 15c.454 0 .88-.102 1.267-.285m-1.762-4.657a3 3 0 013.404 3.404M6.1 6.1l11.8 11.8" />
+                      </svg>
+                    ) : (
+                      // Eye icon
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.477 0 8.268 2.943 9.542 7-1.274 4.057-5.065 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                      </svg>
+                    )}
+                  </span>
+                </div>
+              </div>
+
+
+              {/* Error message */}
+              {error && <p className="text-red-500 text-sm text-center">{error}</p>}
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full bg-gradient-to-r from-blue-500 to-blue-700 text-white text-sm font-[poppins] 
+                          font-normal py-3 rounded hover:from-blue-600 hover:to-blue-800 transition mt-4"
+              >
+                {loading ? 'Logging in...' : 'Sign In '}
+              </button>
+
+              {/* Demo access */}
+              {/* <button
+                type="button"
+                className="w-full mt-2 text-xs font-medium text-[#4B4B4B] font-[poppins] hover:underline rounded-[4px] border border-[#D9D9D9] "
+                onClick={() => alert('Demo access coming soon!')}
+              >
+                Quick Demo Access
+              </button> */}
+
+              {/* Help link */}
+              <p className="text-center text-sm text-gray-500 mt-4">
+                Need help? <a href="#booknow" className="text-blue-500 hover:underline" onClick={() => setShowLoginModal(false)}>Contact Support</a>
+              </p>
+            </form>
+          </div>
+        </div>
+      )}
+
+
+
       <nav className={`navbar ${isFixed ? 'fixed' : ''}`}>
         <div className="navbar-inner">
           <div className="logo">
@@ -76,14 +272,17 @@ export default function Navbar() {
             <a href="#">Testimonials</a>
           </div>
 
-          <div className="nav-actions">
-            <a href="https://idone.in/">Login</a>
-            <a href="#booknow"><button className="demo-button font-[poppins]">Book Demo</button></a>
+          <div className="nav-actions ">
+            <button className='cursor-pointer' onClick={() => setShowLoginModal(true)}>Login</button>
+            <a href="#booknow">
+              <button className="demo-button font-[poppins]">Book Demo</button>
+            </a>
           </div>
+
 
           <div className="nav-actions-mobile">
             <a
-              href="https://idone.in/"
+              onClick={() => setShowLoginModal(true)}
               className={`transition-colors duration-10 ${isScrolledOnMobile ? 'text-black' : 'text-white'
                 }`}
             >
