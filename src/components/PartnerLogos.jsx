@@ -5,7 +5,7 @@ import quess from '../assets/quess.png';
 import niam from '../assets/niam.png';
 
 const logos = [core, niam, quess, delhi, core, niam, quess,core, niam, quess, delhi, core, niam, quess,
-  core, niam, quess, delhi, core, niam, quess,core, niam, quess, delhi, core, niam, quess
+  core, niam, quess, delhi, core, niam, quess,core, niam, quess, delhi, core, niam, quess, core, niam, quess, delhi, core, niam, quess,core, niam, quess, delhi, core, niam, quess
 ];
 
 export default function PartnerLogos() {

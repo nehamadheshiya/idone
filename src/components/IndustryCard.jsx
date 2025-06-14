@@ -79,7 +79,7 @@ const industries = [
     Icon: GovernmentIcon,
     bgGradient: "linear-gradient(135deg, #FF8956, #FF1F1F)",
     description: "Streamlined HR Operations for Public Sector offices. ",
-    features: ["Smart Automation.", "Efficient and transparent.", "Compliant with statutory requirements."]
+    features: ["Smart Automation.", "Efficient and transparent.", "Compliant with legal requirements."]
   },
   {
     title: "Mining",

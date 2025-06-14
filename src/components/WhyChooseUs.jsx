@@ -104,15 +104,16 @@ export default function WhyChooseUs() {
                         style={{ backgroundColor: '#D6EAFF', color: '#007BFF' }}
                     >
                         <img src={biometric} alt="Biometric Icon" className="w-4 h-4" />
-                        <span className='poppins-font text-xs'>Biometric Attendance</span>
+                        <span className='poppins-font text-xs'>Robust HRMS</span>
                     </div>
 
                     <a href="#" className="text-xs block choose lg:mt-4 mt-1 text-[#007BFF] font-medium uppercase mb-2">
-                        Explore Storepulse Dashboard
+                        Built Your Way
                     </a>
                     <h2 className="text-xl text-[#1A1C2D] poppins-font md:text-3xl font-medium mb-4">Why Choose Us?</h2>
                     <p className="text-[#363636] text-sm leading-relaxed mb-4 poppins-font text-[11px]">
-                        Empowering your business with smarter, faster, and secure workforce automation – customisable for your specific needs.
+                       We empower your business with smarter, faster, and secure workforce automation – customisable for your specific needs.
+
                     </p>
                     <button className="mt-4 bg-[#007BFF] poppins-font text-sm hover:bg-[#0059B9] text-[#FFFFFF] font-medium px-5 py-2.5 rounded shadow-xl">
                         Get Started With Us →
