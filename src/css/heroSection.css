@@ -185,20 +185,28 @@
 }
 
 .hero-video-wrapper {
-  margin-top: 3rem;
+  margin-top: 1%;
   text-align: center;
 }
 
 .hero-video {
   max-width: 1020px;
-  max-height: 500px;
+  max-height: 580px;
   width: 100%;
   height: auto;
   z-index: 1;
   position: relative;
   display: block;
   margin: 0 auto;
+  /* border: 1px solid red; */
+  border-radius: 20px;
 }
+
+
+
+/* .hero-video-mob{
+  display: none;
+} */
 
 /* Responsive Styling */
 @media (max-width: 768px) {
@@ -305,5 +313,15 @@
     width: fit-content;
     max-width: 100%;
     height: auto;
+    border-radius: 10px;
   }
+
+  .hero-video-mob{
+    display: block;
+  }
+  .hero-video-wrapper {
+  margin-top: 5%;
+  text-align: center;
+  /* border: 1px solid red; */
+}
 }

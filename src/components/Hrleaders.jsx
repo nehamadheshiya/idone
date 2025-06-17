@@ -94,7 +94,7 @@ export default function Hrleaders() {
                                     src={item.brandLogo || ""}
                                     alt="Brand logo"
                                     className="w-auto"
-                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
+                                // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
                                 />
 
                                 {/* This is valid: item.tagline is a string */}
@@ -119,11 +119,11 @@ export default function Hrleaders() {
                                 <p className="testimonial-text font-[poppins] text-xs font-normal">{item.text}</p>
 
                                 {/* This is valid: item.brandLogo is a JSX element like <svg> */}
-                               <img
+                                <img
                                     src={item.brandLogo || ""}
                                     alt="Brand logo"
                                     className="w-auto"
-                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
+                                // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
                                 />
 
                                 {/* This is valid: item.tagline is a string */}
@@ -142,24 +142,20 @@ export default function Hrleaders() {
             {/* Mobile Marquee (Right Scroll) */}
             <div className="marquee-grid-mob">
                 <div className="marquee-track">
-                    {testimonials.map((item, i) => (
+                    {[...testimonials, ...testimonials].map((item, i) => (
                         <div key={`mob-${i}`} className="testimonial-card">
                             <div className="quote-icon">❝</div>
 
-                            {/* Use the testimonial text */}
                             <p className="testimonial-text font-[poppins] font-normal text-xs">
                                 {item.text}
                             </p>
 
-                            {/* Brand logo (can be SVG, <img>, or JSX) */}
                             <img
-                                    src={item.brandLogo || ""}
-                                    alt="Brand logo"
-                                    className="w-auto"
-                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
-                                />
+                                src={item.brandLogo || ""}
+                                alt="Brand logo"
+                                className="w-auto"
+                            />
 
-                            {/* Tagline with custom color */}
                             <p
                                 className="testimonial-tagline"
                                 style={{ color: item.taglineColor }}
@@ -170,7 +166,6 @@ export default function Hrleaders() {
                     ))}
                 </div>
             </div>
-
 
 
         </div>

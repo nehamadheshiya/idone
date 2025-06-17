@@ -2,12 +2,14 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../assets/images/idoneLogoo.png'
 import bg from '../assets/images/hero-bg.png'
-import vid from '../assets/videos/hero-vid.mp4'
+import vid from '../assets/videos/IDone_Herosection_Video.mp4'
+import vidmob from '../assets/videos/IDone_Herosection_Video_Phone.mp4'
 import '../css/heroSection.css'
+// import ReactPlayer from 'react-player'
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [activeIndex, setactiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [isScrolledOnMobile, setIsScrolledOnMobile] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
   const [showLoginModal, setShowLoginModal] = useState(false);
@@ -99,13 +101,16 @@ export default function Navbar() {
     <path d="M9.9987 9.99935C10.457 9.99935 10.8494 9.83615 11.1758 9.50977C11.5022 9.18338 11.6654 8.79102 11.6654 8.33268C11.6654 7.87435 11.5022 7.48199 11.1758 7.1556C10.8494 6.82921 10.457 6.66602 9.9987 6.66602C9.54036 6.66602 9.148 6.82921 8.82161 7.1556C8.49523 7.48199 8.33203 7.87435 8.33203 8.33268C8.33203 8.79102 8.49523 9.18338 8.82161 9.50977C9.148 9.83615 9.54036 9.99935 9.9987 9.99935ZM9.9987 18.3327C7.76259 16.4299 6.09245 14.6625 4.98828 13.0306C3.88411 11.3987 3.33203 9.88824 3.33203 8.49935C3.33203 6.41602 4.00217 4.75629 5.34245 3.52018C6.68273 2.28407 8.23481 1.66602 9.9987 1.66602C11.7626 1.66602 13.3147 2.28407 14.6549 3.52018C15.9952 4.75629 16.6654 6.41602 16.6654 8.49935C16.6654 9.88824 16.1133 11.3987 15.0091 13.0306C13.9049 14.6625 12.2348 16.4299 9.9987 18.3327Z" fill="#CBCBCB" />
   ]
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setactiveIndex(prev => (prev + 1) % methods.length);
-    }, 1000);
+  const durations = [6000, 6000, 4250, 6050, 6250];
 
-    return () => clearInterval(interval);
-  }, []);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setActiveIndex((prev) => (prev + 1) % methods.length);
+    }, durations[activeIndex]);
+
+    return () => clearTimeout(timeout);
+  }, [activeIndex, methods.length]);
+
 
   return (<>
     <div className="hero-container font-[poppins]">
@@ -343,7 +348,7 @@ export default function Navbar() {
             <button
               key={index}
               className={`method-button ${activeIndex === index ? 'active' : ''}`}
-              onClick={() => setactiveIndex(index)}
+              // onClick={() => setActiveIndex(index)}
             >
               <span className="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
@@ -363,10 +368,15 @@ export default function Navbar() {
       </section>
 
       <section className="hero-video-wrapper">
+        
         <video className="hero-video" autoPlay muted loop>
           <source src={vid} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
+         {/* <video className="hero-video-mob" autoPlay muted loop>
+          <source src={vidmob} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video> */}
       </section>
     </div>
 
