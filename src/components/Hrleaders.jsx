@@ -69,12 +69,17 @@ export default function Hrleaders() {
                 <p className='description mb-6 text-xs'>
                     Service Content Momentary Telegraph King Bread Chalk Thief Distance Inform Boundary Because Eat Artificial Good Department Umbrella Ability Miserable
                 </p>
-                <button className='cta-button'>
-                    Join us
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-                        <path d="M16.675 11L11.075 5.4L12.5 4L20.5 12L12.5 20L11.075 18.6L16.675 13H4.5V11H16.675Z" fill="#007BFF" />
-                    </svg>
-                </button>
+                 <a href="#booknow">
+                                 <button className="cta-button">
+        
+  Join us
+  <svg className="cta-button2" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+    <path d="M16.675 11L11.075 5.4L12.5 4L20.5 12L12.5 20L11.075 18.6L16.675 13H4.5V11H16.675Z" fill="currentColor" />
+  </svg>
+</button>
+
+                 </a>
+ 
             </div>
 
             {/* Right Section */}

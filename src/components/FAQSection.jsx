@@ -139,10 +139,13 @@ export default function FAQSection() {
           Still Have Questions?
         </h2>
         <div className="flex items-center justify-center">
-          <button className="text-[13px] mt-2 bg-[#007BFF] shadow-xl hover:bg-[#0059B9] rounded-sm text-white px-4 py-2.5 flex items-center gap-2 poppins-font uppercase font-medium mb-2">
+          <a href="#booknow">
+              <button className="text-[13px] mt-2 bg-[#007BFF] shadow-xl hover:bg-[#0059B9] rounded-sm text-white px-4 py-2.5 flex items-center gap-2 poppins-font uppercase font-medium mb-2">
             <span>Contact Our Experts</span>
             <img src={arrow_back} alt="Arrow Back" className="w-4 h-4 font-bold" />
           </button>
+          </a>
+        
 
         </div>
       </div>

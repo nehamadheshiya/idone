@@ -28,14 +28,15 @@ export default function CustomIndustrySection() {
                         </button>
                     </div>
 
-                    <h2 className="text-3xl poppins-font  md:text-4xl font-semibold mb-4">
+                    <h2 className="text-[16px] poppins-font font-semibold  lg:text-4xl lg:font-semibold mb-4">
                        IDONE Adapts to Your Unique Business Needs
                     </h2>
-                    <p className="text-base md:text-[14px] poppins-font  text-[#CECECE] mb-8">
+                    <p className="text-[12px] lg:text-[14px] poppins-font  text-[#CECECE] mb-8">
                        Our platform is highly flexible and can be tailored to accommodate the specific nuances of your business segment. Schedule a personalised demo with our Solutions Team to explore how IDONE fits right into your business model.
 
                     </p>
-                    <button className="bg-white poppins-font text-[14px] text-[#007BFF] font-medium py-3 px-6 rounded-lg hover:bg-gray-200 hover:text-gray-700 transition flex items-center justify-center gap-2 mx-auto">
+                   <a href="#booknow">
+                     <button  className="bg-white poppins-font text-[14px] text-[#007BFF] font-medium py-3 px-6 rounded-lg hover:bg-gray-200 hover:text-gray-700 transition flex items-center justify-center gap-2 mx-auto">
                         BOOK A DEMO NOW
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -47,6 +48,7 @@ export default function CustomIndustrySection() {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                         </svg>
                     </button>
+                   </a>
                 </div>
             </section>
         </div>

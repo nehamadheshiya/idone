@@ -34,7 +34,7 @@ const tabs = [
         image: payroll,
         title: 'Automated Payroll Integration',
         description:
-            'Generate and export Payroll data to external databases with easy integrations. No more end-of-month late hours for your team.',
+            'Generate and export Payroll data to external databases with easy integrations. You no longer need to spend late hours at the end of the month tallying manual calculations.',
     },
     {
         id: 'leave',
@@ -88,14 +88,14 @@ const iconMap = {
     assets: <ImageIcon className="w-4 h-4" />,
 };
 
-const imageWidthMap = {
-    attendance: 'w-[300px] md:w-[400px] lg:w-[470px]',
-    payroll: 'w-[220px] md:w-[340px] lg:w-[350px]',
-    leave: 'w-[350px] md:w-[400px] lg:w-[560px]',
-    timetable: 'w-[340px] md:w-[460px] lg:w-[530px]',
-    ui: 'w-[360px] md:w-[480px] lg:w-[560px]',
-    assets: 'w-[250px] md:w-[350px] lg:w-[400px]',
-};
+// const imageWidthMap = {
+//     attendance: 'w-[300px] md:w-[400px] lg:w-[603px]',
+//     payroll: 'w-[220px] md:w-[340px] lg:w-[603px]',
+//     leave: 'w-[350px] md:w-[400px] lg:w-[603px]',
+//     timetable: 'w-[340px] md:w-[460px] lg:w-[603px]',
+//     ui: 'w-[360px] md:w-[480px] lg:w-[603px]',
+//     assets: 'w-[250px] md:w-[350px] lg:w-[603px]',
+// };
 
 
 export default function HRFeatures() {
@@ -139,96 +139,97 @@ export default function HRFeatures() {
     const activeTab = tabs[activeIndex];
 
     return (
-        <div className="bg-gradient-to-b from-[#F8FAFF] to-[#D9E6FF]">
-            <div className="lg:px-32 px-4 pb-14 pt-12 max-w-screen-xl mx-auto">
-                <style>
-                    {`
-                        .no-scrollbar::-webkit-scrollbar {
-                            display: none;
-                        }
-                        .no-scrollbar {
-                            -ms-overflow-style: none;
-                            scrollbar-width: none;
-                        }
-                        @keyframes marquee {
-                            0% { transform: translateX(0%); }
-                            100% { transform: translateX(-50%); }
-                        }
-                        .marquee {
-                            display: flex;
-                            width: fit-content;
-                            animation: marquee 20s linear infinite;
-                        }
-                        .choose {
-                            font-family: 'Inter', sans-serif;
-                            letter-spacing: 0.01em;
-                        }
-                        .poppins-font {
-                            font-family: 'Poppins', sans-serif;
-                            letter-spacing: 0.03em;
-                        }
-                    `}
-                </style>
+ <div className="bg-gradient-to-b from-[#F8FAFF] to-[#D9E6FF] h-[650px] md:h-[900px] lg:h-[550px] overflow-hidden">
+  <div className="lg:px-32 px-4 pb-14 pt-12 max-w-screen-xl mx-auto h-full flex flex-col">
 
-                {/* Button Group */}
-                <div className="mb-8">
-                    <div
-                        ref={scrollContainerRef}
-                        className="flex flex-nowrap sm:flex-wrap overflow-x-auto sm:overflow-visible gap-4 justify-start sm:justify-center px-2 sm:px-0 no-scrollbar"
-                    >
-                        {tabs.map((tab, index) => (
-                            <div
-                                key={tab.id}
-                                className="flex-shrink-0 w-auto flex justify-center"
-                                ref={(el) => (buttonRefs.current[index] = el)}
-                            >
-                                <button
-                                    onClick={() => setTab(index)}
-                                    className={`whitespace-nowrap flex items-center justify-center gap-2 px-4 lg:px-6 py-2.5 rounded-sm border text-sm font-medium transition-all
-                                        ${index === activeIndex
-                                            ? 'bg-gradient-to-r from-[#0B77EC] to-[#114fab] text-white border-transparent shadow-md'
-                                            : 'text-[#727272] border hover:bg-blue-50'
-                                        }`}
-                                >
-                                    {iconMap[tab.id]}
-                                    {tab.label}
-                                </button>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+    <style>
+      {`
+        .no-scrollbar::-webkit-scrollbar {
+          display: none;
+        }
+        .no-scrollbar {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
+        }
+        @keyframes marquee {
+          0% { transform: translateX(0%); }
+          100% { transform: translateX(-50%); }
+        }
+        .marquee {
+          display: flex;
+          width: fit-content;
+          animation: marquee 20s linear infinite;
+        }
+        .choose {
+          font-family: 'Inter', sans-serif;
+          letter-spacing: 0.01em;
+        }
+        .poppins-font {
+          font-family: 'Poppins', sans-serif;
+          letter-spacing: 0.03em;
+        }
+      `}
+    </style>
 
-                {/* Tab Content */}
-                <div className="flex flex-col mt-16 lg:flex-row items-center justify-between  transition-all duration-300">
+    {/* Button Group */}
+    <div className="mb-8">
+      <div
+        ref={scrollContainerRef}
+        className="flex flex-nowrap sm:flex-wrap overflow-x-auto sm:overflow-visible gap-4 justify-start sm:justify-center px-2 sm:px-0 no-scrollbar"
+      >
+        {tabs.map((tab, index) => (
+          <div
+            key={tab.id}
+            className="flex-shrink-0 w-auto flex justify-center"
+            ref={(el) => (buttonRefs.current[index] = el)}
+          >
+            <button
+              onClick={() => setTab(index)}
+              className={`whitespace-nowrap flex items-center justify-center gap-2 px-4 lg:px-6 py-2.5 rounded-sm border text-sm font-medium transition-all
+                ${index === activeIndex
+                  ? 'bg-gradient-to-r from-[#0B77EC] to-[#114fab] text-white border-transparent shadow-md'
+                  : 'text-[#727272] border hover:bg-blue-50'
+                }`}
+            >
+              {iconMap[tab.id]}
+              {tab.label}
+            </button>
+          </div>
+        ))}
+      </div>
+    </div>
 
-                    {/* LEFT: Fixed-width container for image */}
-                    <div className="lg:w-[110%] flex justify-center items-center">
-                        <img
-                            src={activeTab.image}
-                            alt={activeTab.label}
-                            className={`${imageWidthMap[activeTab.id]} transition-all duration-300`}
-                        />
-                    </div>
+    {/* Tab Content */}
+    <div className="flex-1 flex flex-col lg:flex-row items-center justify-between gap-6 overflow-hidden">
 
-                    {/* RIGHT: Text and content */}
-                    <div className="text-center lg:text-left max-w-screen-xl">
-                        <div className="flex justify-center items-center lg:justify-start">
-                            <button className="flex items-center justify-center gap-2 px-4 poppins-font py-2.5 mb-6 rounded-sm text-xs font-medium text-[#007BFF] bg-[#D6EAFF]">
-                                {iconMap[activeTab.id]}
-                                {activeTab.labe2}
-                            </button>
-                        </div>
+      {/* LEFT: Image */}
+      <div className="w-full lg:w-[55%] flex justify-center items-center h-full">
+        <img
+          src={activeTab.image}
+          alt={activeTab.label}
+          className="w-[90%] max-w-[630px] max-h-full object-contain transition-all duration-300"
+        />
+      </div>
 
-                        <h3 className="text-xl poppins-font md:text-3xl text-[#2D2D2D] font-semibold mb-4">
-                            {activeTab.title}
-                        </h3>
-                        <p className="text-[#363636] poppins-font text-[13px]">
-                            {activeTab.description}
-                        </p>
-                    </div>
-                </div>
-
-            </div>
+      {/* RIGHT: Text */}
+      <div className="w-full lg:w-[45%] text-center lg:text-left">
+        <div className="flex justify-center items-center lg:justify-start">
+          <button className="flex items-center justify-center gap-2 px-4 poppins-font py-2.5 mb-6 rounded-sm text-xs font-medium text-[#007BFF] bg-[#D6EAFF]">
+            {iconMap[activeTab.id]}
+            {activeTab.labe2}
+          </button>
         </div>
+
+        <h3 className="text-xl poppins-font md:text-3xl text-[#2D2D2D] font-semibold mb-4">
+          {activeTab.title}
+        </h3>
+        <p className="text-[#363636] poppins-font text-[13px]">
+          {activeTab.description}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
     );
 }

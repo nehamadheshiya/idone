@@ -111,13 +111,16 @@ export default function WhyChooseUs() {
                         Built Your Way
                     </a>
                     <h2 className="text-xl text-[#1A1C2D] poppins-font md:text-3xl font-medium mb-4">Why Choose Us?</h2>
-                    <p className="text-[#363636] text-sm leading-relaxed mb-4 poppins-font text-[11px]">
+                    <p className="text-[#363636] text-sm leading-relaxed mb-4 poppins-font text-xs">
                        We empower your business with smarter, faster, and secure workforce automation – customisable for your specific needs.
 
                     </p>
-                    <button className="mt-4 bg-[#007BFF] poppins-font text-sm hover:bg-[#0059B9] text-[#FFFFFF] font-medium px-5 py-2.5 rounded shadow-xl">
+                        <a href="#booknow">
+                              <button className="mt-4 bg-[#007BFF] poppins-font text-sm hover:bg-[#0059B9] text-[#FFFFFF] font-medium px-5 py-2.5 rounded shadow-xl">
                         Get Started With Us →
                     </button>
+                        </a>
+                  
                 </div>
 
                 {/* Right Section */}

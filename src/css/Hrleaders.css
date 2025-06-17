@@ -48,6 +48,15 @@
   gap: 0.5rem;
   font-weight: 500;
 }
+.cta-button:hover {
+  background-color: #E4E4E4;
+  color: #0A3981; 
+}
+.cta-button2:hover {
+
+  color: #0A3981;
+}
+
 
 .right-content {
   width: 66.6667%;
