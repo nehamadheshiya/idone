@@ -1,9 +1,8 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
-import logo from '../assets/images/idoneLogoo.png'
-import bg from '../assets/images/hero-bg.png'
-import vid from '../assets/videos/IDone_Herosection_Video.mp4'
-import vidmob from '../assets/videos/IDone_Herosection_Video_Phone.mp4'
+import logo from '../idone_assets/images/idoneLogoo.png';
+import vid from '../idone_assets/videos/IDone_Herosection_Video.mp4';
+import vidmob from '../idone_assets/videos/IDone_Herosection_Video_Phone.mp4';
 import '../css/heroSection.css'
 // import ReactPlayer from 'react-player'
 
@@ -271,10 +270,10 @@ export default function Navbar() {
           </div>
 
           <div className="nav-links">
-            <a href="#">Features</a>
-            <a href="#">Industries</a>
-            <a href="#">About Us</a>
-            <a href="#">Testimonials</a>
+            <a href="#features">Features</a>
+            <a href="#weserve">Industries</a>
+            <a href="#weserve">About Us</a>
+            <a href="#testimonials">Testimonials</a>
           </div>
 
           <div className="nav-actions ">

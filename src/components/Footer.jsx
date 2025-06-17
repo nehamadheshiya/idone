@@ -1,5 +1,5 @@
 import React from "react";
-import footerLogo from "../assets/footerLogo.png";
+import footerLogo from "../idone_assets/footerLogo.png";
 
 const Footer = () => {
     return (

@@ -1,8 +1,8 @@
 import React from 'react';
-import core from '../assets/core.png';
-import delhi from '../assets/delhi.png';
-import quess from '../assets/quess.png';
-import niam from '../assets/niam.png';
+import core from '../idone_assets/core.png';
+import delhi from '../idone_assets/delhi.png';
+import quess from '../idone_assets/quess.png';
+import niam from '../idone_assets/niam.png';
 
 const logos = [core, niam, quess, delhi, core, niam, quess, delhi, core, niam, quess, delhi
   ,
@@ -67,10 +67,10 @@ export default function PartnerLogos() {
 
 
 // import React from 'react';
-// import core from '../assets/core.png';
-// import delhi from '../assets/delhi.png';
-// import quess from '../assets/quess.png';
-// import niam from '../assets/niam.png';
+// import core from '../idone_assets/core.png';
+// import delhi from '../idone_assets/delhi.png';
+// import quess from '../idone_assets/quess.png';
+// import niam from '../idone_assets/niam.png';
 
 // const logos = [core, niam, quess, delhi, core, niam, quess,core, niam, quess, delhi, core, niam, quess,
 //   core, niam, quess, delhi, core, niam, quess,core, niam, quess,

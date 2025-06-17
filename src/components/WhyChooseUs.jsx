@@ -1,9 +1,9 @@
 import React from 'react';
-import biometric from "../assets/biometric.png";
-import logistic from "../assets/logistic.png";
-import banking from "../assets/banking.png";
-import startups from "../assets/startups.png";
-import health from "../assets/health.png";
+import biometric from "../idone_assets/biometric.png";
+import logistic from "../idone_assets/logistic.png";
+import banking from "../idone_assets/banking.png";
+import startups from "../idone_assets/startups.png";
+import health from "../idone_assets/health.png";
 
 const LogisticsIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 30 30" fill="none">
@@ -98,7 +98,9 @@ export default function WhyChooseUs() {
 
                 {/* Left Section */}
 
-                <div className="max-w-md mt-0 lg:mt-[5%] space-y-4 text-center lg:text-left">
+                <div className="max-w-md mt-0 lg:mt-[5%] space-y-4 text-center lg:text-left"
+                id='weserve'
+                >
                     <div
                         className="inline-flex items-center gap-1 py-2.5 px-4 rounded-md"
                         style={{ backgroundColor: '#D6EAFF', color: '#007BFF' }}
