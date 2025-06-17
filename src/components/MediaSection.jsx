@@ -24,9 +24,9 @@ const MediaSection = () => {
                 <h2 className="text-xl poppins-font md:text-2xl font-medium  mb-12">
                     Featured In Industry-Leading Media Voices In Tech And HR.
                 </h2>
-                <div className="flex flex-col mx-4 lg:mx-0 items-center gap-y-10 mt-16 ">
+                <div className="flex flex-col mx-2 lg:mx-0 items-center gap-y-10 mt-16 ">
                     {/* Row 1 - 4 logos */}
-                    <div className="grid grid-cols-4 gap-10">
+                    <div className="grid grid-cols-4 gap-1 lg:gap-10">
                         <img src={yourstory} alt="YourStory" className="h-5 object-contain mx-auto" />
                         <img src={indianexpress} alt="Indian Express" className="h-6 object-contain mx-auto" />
                         <img src={outlook} alt="Outlook" className="h-5 object-contain mx-auto" />
@@ -36,7 +36,7 @@ const MediaSection = () => {
                     </div>
 
                     {/* Row 2 - 3 logos centered under 4 */}
-                    <div className="grid grid-cols-3 gap-16">
+                    <div className="grid grid-cols-3 gap-8 lg:gap-16">
                         <img src={tc} alt="TechCrunch" className="h-5 object-contain mx-auto" />
                         <img src={dna} alt="DNA" className="h-5 object-contain mx-auto" />
                         <img src={toi} alt="TOI" className="h-5 object-contain mx-auto" />

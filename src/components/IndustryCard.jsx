@@ -79,7 +79,7 @@ const industries = [
     Icon: GovernmentIcon,
     bgGradient: "linear-gradient(135deg, #FF8956, #FF1F1F)",
     description: "Streamlined HR Operations for Public Sector offices. ",
-    features: ["Smart Automation.", "Efficient and transparent.", "Compliant with statutory requirements."]
+    features: ["Smart Automation.", "Efficient and transparent.", "Compliant with legal requirements."]
   },
   {
     title: "Mining",
@@ -119,7 +119,7 @@ const industries = [
 ];
 
 const IndustryCard = ({ title, Icon, description, features, bgGradient }) => (
-  <div className="group border border-[#7DBBFF] hover:border-[#007BFF] hover:border-[1.5px] hover:shadow-2xl rounded-xl shadow p-4 lg:p-6 bg-white transition-transform duration-300 transform hover:scale-105 origin-left">
+  <div className="group border border-[#7DBBFF] hover:border-[#007BFF] hover:border-[1.5px] hover:shadow-2xl rounded-xl lg:shadow p-4 lg:p-6 bg-white transition-transform duration-300 transform hover:scale-105 origin-left">
     <div className="flex items-center gap-3 lg:block">
       <div
         className="w-11 h-11 group-hover:w-12 group-hover:h-12 rounded-md flex items-center justify-center transition-all duration-300"

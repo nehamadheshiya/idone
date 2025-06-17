@@ -98,13 +98,13 @@ export default function AttendanceOptions() {
           {attendanceOptions.map((option, index) => (
             <div
               key={index}
-              className="group min-w-[75%]  snap-start lg:min-w-0 relative  overflow-hidden  transition-all duration-300 lg:hover:scale-100"
+              className="group min-w-[13.5rem]  md:min-w-[30%] snap-start lg:min-w-0 relative  overflow-hidden  transition-all duration-300 lg:hover:scale-100"
             >
               <div className="w-full h-full  transform transition-transform duration-500 lg:group-hover:scale-95">
                 <img
                   src={option.image}
                   alt={option.title}
-                  className="w-full rounded-md h-full object-cover"
+                  className="w-[230px] h-[300px] lg:w-full lg:h-full rounded-md  object-cover"
                 />
                 <div className="absolute inset-0 flex flex-col justify-end items-start p-3 text-white  via-transparent to-transparent">
                   <h3 className="text-[15px] text-[#FFFFFF] poppins-font tracking-widest">

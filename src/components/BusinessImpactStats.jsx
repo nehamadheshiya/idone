@@ -48,21 +48,21 @@ const BusinessImpactStats = () => {
                     <div className="hover-card">
                         <div className="text-4xl font-semibold text-[#E7FF88] main-number">4x</div>
                         <div className="text-[14px] text-[#F0F0F0] font-medium mt-2">Faster HR Approvals</div>
-                        <p className="text-[11px] text-[#D2D2D2] mt-1">Reduce new hire paperwork time</p>
+                        <p className="text-[11px] text-[#D2D2D2] mt-1">Approval tickets swiftly move from request to resolution.</p>
                     </div>
 
                     {/* Item 3 */}
                     <div className="hover-card">
                         <div className="text-4xl font-semibold text-[#BCEAFF] main-number">99.9%</div>
                         <div className="text-[14px] text-[#F0F0F0] font-medium mt-2">Platform Uptime</div>
-                        <p className="text-[11px] text-[#D2D2D2] mt-1">Reduce new hire paperwork time</p>
+                        <p className="text-[11px] text-[#D2D2D2] mt-1">Robust infra for seamless attendance tracking.</p>
                     </div>
 
                     {/* Item 4 */}
                     <div className="hover-card">
                         <div className="text-4xl font-semibold text-[#FFC3FA] main-number">70%</div>
                         <div className="text-[14px] text-[#F0F0F0] font-medium mt-2">Cut in HR Operational Load</div>
-                        <p className="text-[11px] text-[#D2D2D2] mt-1">Reduce new hire paperwork time</p>
+                        <p className="text-[11px] text-[#D2D2D2] mt-1">Minimal manual workload – from onboarding to shift tracking.</p>
                     </div>
                 </div>
                 </div>
