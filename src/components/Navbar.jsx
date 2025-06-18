@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import logo from '../idone_assets/images/idoneLogoo.png';
 import vid from '../idone_assets/videos/IDone_Herosection_Video.mp4';
-import vidmob from '../idone_assets/videos/IDone_Herosection_Video_Phone.mp4';
 import '../css/heroSection.css'
 // import ReactPlayer from 'react-player'
 
@@ -368,7 +367,7 @@ export default function Navbar() {
 
       <section className="hero-video-wrapper">
 
-        <video className="hero-video"
+        <video className="hero-video rounded-2xl"
           autoPlay
           muted
           loop
