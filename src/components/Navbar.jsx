@@ -122,7 +122,7 @@ export default function Navbar() {
             </button>
 
 
-            <h2 className="text-center text-black mb-1 font-[poppins] font-medium text-xl">Welcome Back</h2>
+            <h2 ame="text-center text-black mb-1 font-[poppins] font-medium text-xl">Welcome Back</h2>
             <p className="text-sm text-center text-gray-500 mb-8 font-normal">Sign in to access your dashboard</p>
 
 
