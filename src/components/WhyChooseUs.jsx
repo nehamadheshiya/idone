@@ -79,7 +79,9 @@ export default function WhyChooseUs() {
     ];
 
     return (
-        <div className="flex items-center justify-center py-14">
+        <div className="flex items-center justify-center py-14"
+         id='weserve'
+        >
             <div className="mx-2 lg:mx-0 max-w-5xl bg-white flex flex-col lg:flex-row justify-between items-center lg:items-start text-center lg:text-left p-4 lg:p-0 gap-10 w-full">
 
                 <style>{`
@@ -99,7 +101,7 @@ export default function WhyChooseUs() {
                 {/* Left Section */}
 
                 <div className="max-w-md mt-0 lg:mt-[5%] space-y-4 text-center lg:text-left"
-                id='weserve'
+               
                 >
                     <div
                         className="inline-flex items-center gap-1 py-2.5 px-4 rounded-md"

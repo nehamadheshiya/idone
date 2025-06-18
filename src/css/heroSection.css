@@ -18,7 +18,7 @@
 
 .navbar.fixed {
   background: white;
-  border: 1px solid #e1e1e1;
+  border-bottom: 1px solid #e1e1e1;
   .logo {
     filter: invert();
   }
@@ -202,8 +202,6 @@
   border-radius: 20px;
 }
 
-
-
 /* .hero-video-mob{
   display: none;
 } */
@@ -226,7 +224,7 @@
   }
 
   .navbar {
-    background: linear-gradient(to bottom, #1b1d2e, #191e33);
+    background: linear-gradient(to bottom, #1b1d2e, #1a1c2d);
     height: 7vh;
     width: 100%;
     position: relative;
@@ -309,19 +307,15 @@
     width: 80%;
   }
 
+  .hero-video-wrapper {
+    margin-top: 5%;
+    text-align: center;
+  }
   .hero-video {
     width: fit-content;
     max-width: 100%;
     height: auto;
     border-radius: 10px;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   }
-
-  .hero-video-mob{
-    display: block;
-  }
-  .hero-video-wrapper {
-  margin-top: 5%;
-  text-align: center;
-  /* border: 1px solid red; */
-}
 }

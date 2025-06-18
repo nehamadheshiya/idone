@@ -271,7 +271,7 @@ export default function Navbar() {
 
           <div className="nav-links">
             <a href="#features">Features</a>
-            <a href="#weserve">Industries</a>
+            <a href="#industrycards">Industries</a>
             <a href="#weserve">About Us</a>
             <a href="#testimonials">Testimonials</a>
           </div>
@@ -347,7 +347,7 @@ export default function Navbar() {
             <button
               key={index}
               className={`method-button ${activeIndex === index ? 'active' : ''}`}
-              // onClick={() => setActiveIndex(index)}
+            // onClick={() => setActiveIndex(index)}
             >
               <span className="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none">
@@ -363,19 +363,21 @@ export default function Navbar() {
             </button>
           ))}
         </div>
-        
+
       </section>
 
       <section className="hero-video-wrapper">
-        
-        <video className="hero-video" autoPlay muted loop>
+
+        <video className="hero-video"
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="none"
+        >
           <source src={vid} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-         {/* <video className="hero-video-mob" autoPlay muted loop>
-          <source src={vidmob} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video> */}
       </section>
     </div>
 
