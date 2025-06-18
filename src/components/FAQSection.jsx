@@ -1,6 +1,6 @@
 import { useState } from "react";
-import arrow_down from "../assets/arrow_down.png";
-import arrow_back from "../assets/arrow_back.png";
+import arrow_down from "../idone_assets/arrow_down.png";
+import arrow_back from "../idone_assets/arrow_back.png";
 
 const faqs = [
   "How can employees mark attendance on IDONE HRMS?",

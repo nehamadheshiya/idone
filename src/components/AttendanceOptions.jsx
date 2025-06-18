@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
-import camera from '../assets/camera.png';
-import finger from '../assets/finger.png';
-import palm from '../assets/palm.png';
-import scan from '../assets/scan.png';
-import person from '../assets/person.png';
+import camera from '../idone_assets/camera.png';
+import finger from '../idone_assets/finger.png';
+import palm from '../idone_assets/palm.png';
+import scan from '../idone_assets/scan.png';
+import person from '../idone_assets/person.png';
 
 const attendanceOptions = [
   {
@@ -131,7 +131,7 @@ export default function AttendanceOptions() {
           ))}
         </div>
 
-        <div className="pt-20">
+        <div className="pt-20" id='features'>
           <p className="text-xs bg-[#F3F5FF] choose text-[#007BFF] font-medium uppercase mb-2">
             Explore IDONE Dashboard
           </p>

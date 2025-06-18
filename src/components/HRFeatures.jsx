@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 
-import attendance from "../assets/attendance.png";
-import payroll from "../assets/payroll.png";
-import leave from "../assets/leave.png";
-import timetable from "../assets/timetable.png";
-import userinterface from "../assets/userinterface.png";
-import assets from "../assets/assets.png";
+import attendance from "../idone_assets/attendance.png";
+import payroll from "../idone_assets/payroll.png";
+import leave from "../idone_assets/leave.png";
+import timetable from "../idone_assets/timetable.png";
+import userinterface from "../idone_assets/userinterface.png";
+import assets from "../idone_assets/assets.png";
 
 import {
     User2,

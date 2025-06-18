@@ -1,11 +1,11 @@
 import React from 'react';
-import yourstory from '../assets/yourstory.png';
-import indianexpress from '../assets/indianexpress.png';
-import forbes from '../assets/forbes.png';
-import toi from '../assets/toi.png';
-import tc from '../assets/tc.png';
-import outlook from '../assets/outlook.png';
-import dna from '../assets/dna.png';
+import yourstory from '../idone_assets/yourstory.png';
+import indianexpress from '../idone_assets/indianexpress.png';
+import forbes from '../idone_assets/forbes.png';
+import toi from '../idone_assets/toi.png';
+import tc from '../idone_assets/tc.png';
+import outlook from '../idone_assets/outlook.png';
+import dna from '../idone_assets/dna.png';
 
 const MediaSection = () => {
     return (

@@ -1,11 +1,11 @@
 import React from 'react';
 import '../css/Hrleaders.css';
-import core from '../assets/images/core.png'
-import team from '../assets/images/team.png'
-import orion from '../assets/images/orion.png'
-import labour from '../assets/images/labour.png'
-import quess from '../assets/images/quess.svg'
-import niam from '../assets/images/niam.svg'
+import core from '../idone_assets/images/core.png'
+import team from '../idone_assets/images/team.png'
+import orion from '../idone_assets/images/orion.png'
+import labour from '../idone_assets/images/labour.png'
+import quess from '../idone_assets/images/quess.svg'
+import niam from '../idone_assets/images/niam.svg'
 
 export default function Hrleaders() {
     const testimonials = [
@@ -56,7 +56,9 @@ export default function Hrleaders() {
 
 
     return (
-        <div className='hrleaders-wrapper flex flex-row text-white px-22 py-16'>
+        <div className='hrleaders-wrapper flex flex-row text-white px-22 py-16'
+        id='testimonials'
+        >
             {/* Left Section */}
             <div className="left-content px-4 flex flex-col items-center text-center lg:block lg:text-left lg:items-start lg:px-14">
 
@@ -67,19 +69,19 @@ export default function Hrleaders() {
                     What HR Leaders <br /> Are Saying
                 </h2>
                 <p className='description mb-6 text-xs'>
-                    Service Content Momentary Telegraph King Bread Chalk Thief Distance Inform Boundary Because Eat Artificial Good Department Umbrella Ability Miserable
+                    At IDONE, we’re not just building software - we’re simplifying people management for employee-first organisations. Here’s what HR leaders have to say about us.
                 </p>
-                 <a href="#booknow">
-                                 <button className="cta-button">
-        
-  Join us
-  <svg className="cta-button2" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
-    <path d="M16.675 11L11.075 5.4L12.5 4L20.5 12L12.5 20L11.075 18.6L16.675 13H4.5V11H16.675Z" fill="currentColor" />
-  </svg>
-</button>
+                <a href="#booknow">
+                    <button className="cta-button">
 
-                 </a>
- 
+                        Book a Demo
+                        <svg className="cta-button2" xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                            <path d="M16.675 11L11.075 5.4L12.5 4L20.5 12L12.5 20L11.075 18.6L16.675 13H4.5V11H16.675Z" fill="currentColor" />
+                        </svg>
+                    </button>
+
+                </a>
+
             </div>
 
             {/* Right Section */}
@@ -99,7 +101,7 @@ export default function Hrleaders() {
                                     src={item.brandLogo || ""}
                                     alt="Brand logo"
                                     className="w-auto"
-                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
+                                // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
                                 />
 
                                 {/* This is valid: item.tagline is a string */}
@@ -124,11 +126,11 @@ export default function Hrleaders() {
                                 <p className="testimonial-text font-[poppins] text-xs font-normal">{item.text}</p>
 
                                 {/* This is valid: item.brandLogo is a JSX element like <svg> */}
-                               <img
+                                <img
                                     src={item.brandLogo || ""}
                                     alt="Brand logo"
                                     className="w-auto"
-                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
+                                // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
                                 />
 
                                 {/* This is valid: item.tagline is a string */}
@@ -147,24 +149,20 @@ export default function Hrleaders() {
             {/* Mobile Marquee (Right Scroll) */}
             <div className="marquee-grid-mob">
                 <div className="marquee-track">
-                    {testimonials.map((item, i) => (
+                    {[...testimonials, ...testimonials].map((item, i) => (
                         <div key={`mob-${i}`} className="testimonial-card">
                             <div className="quote-icon">❝</div>
 
-                            {/* Use the testimonial text */}
                             <p className="testimonial-text font-[poppins] font-normal text-xs">
                                 {item.text}
                             </p>
 
-                            {/* Brand logo (can be SVG, <img>, or JSX) */}
                             <img
-                                    src={item.brandLogo || ""}
-                                    alt="Brand logo"
-                                    className="w-auto"
-                                    // style={{ filter: `drop-shadow(0 0 1px ${item.brandColor})` }}
-                                />
+                                src={item.brandLogo || ""}
+                                alt="Brand logo"
+                                className="w-auto"
+                            />
 
-                            {/* Tagline with custom color */}
                             <p
                                 className="testimonial-tagline"
                                 style={{ color: item.taglineColor }}
@@ -175,7 +173,6 @@ export default function Hrleaders() {
                     ))}
                 </div>
             </div>
-
 
 
         </div>

@@ -1,8 +1,8 @@
 import React from 'react';
-import core from '../assets/core.png';
-import delhi from '../assets/delhi.png';
-import quess from '../assets/quess.png';
-import niam from '../assets/niam.png';
+import core from '../idone_assets/core.png';
+import delhi from '../idone_assets/delhi.png';
+import quess from '../idone_assets/quess.png';
+import niam from '../idone_assets/niam.png';
 
 const logos = [core, niam, quess, delhi, core, niam, quess, delhi, core, niam, quess, delhi
   ,
@@ -40,11 +40,9 @@ export default function PartnerLogos() {
         `}
       </style>
 
-      <div className="text-center mb-8 mt-68">
-        <p className="text-xs choose text-[#007BFF] font-medium uppercase mb-2">
-          TRUSTED PARTNERS
-        </p>
-        <h2 className="text-xl poppins-font md:text-2xl font-medium mb-12">
+      <div className="text-center mb-8 mt-0 md:mt-48">
+        <p className="text-xs choose text-[#007BFF] font-medium uppercase mb-2">TRUSTED PARTNERS</p>
+        <h2 className="text-xl poppins-font md:text-2xl font-medium  mb-12">
           Powering Success For Industry Leaders
         </h2>
       </div>
@@ -69,10 +67,10 @@ export default function PartnerLogos() {
 
 
 // import React from 'react';
-// import core from '../assets/core.png';
-// import delhi from '../assets/delhi.png';
-// import quess from '../assets/quess.png';
-// import niam from '../assets/niam.png';
+// import core from '../idone_assets/core.png';
+// import delhi from '../idone_assets/delhi.png';
+// import quess from '../idone_assets/quess.png';
+// import niam from '../idone_assets/niam.png';
 
 // const logos = [core, niam, quess, delhi, core, niam, quess,core, niam, quess, delhi, core, niam, quess,
 //   core, niam, quess, delhi, core, niam, quess,core, niam, quess,

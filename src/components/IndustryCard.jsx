@@ -147,7 +147,9 @@ const IndustryCard = ({ title, Icon, description, features, bgGradient }) => (
 
 const IndustriesGrid = () => {
   return (
-    <section className="bg-[#f5f7ff] py-12 px-4 md:px-8">
+    <section className="bg-[#f5f7ff] py-12 px-4 md:px-8"
+    id="industrycards"
+    >
       <div className="text-center mb-10">
         <p className="text-xs choose text-[#007BFF] font-medium uppercase mb-2">
           BUILT FOR EVERY SECTOR
